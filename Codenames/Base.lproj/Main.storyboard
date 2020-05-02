@@ -19,7 +19,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="K1Q-PO-2GU">
                                 <rect key="frame" x="44" y="0.0" width="808" height="333"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bKa-5N-Ggc">
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bKa-5N-Ggc">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -36,7 +36,7 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uq3-tL-42s">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uq3-tL-42s" customClass="DetailView" customModule="Codenames" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="333" width="896" height="81"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
@@ -58,7 +58,7 @@
                     </view>
                     <connections>
                         <outlet property="cardCollection" destination="K1Q-PO-2GU" id="jcB-7A-2YQ"/>
-                        <outlet property="deteilView" destination="uq3-tL-42s" id="b9J-5q-RoB"/>
+                        <outlet property="detailView" destination="uq3-tL-42s" id="eNd-g8-5Qz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

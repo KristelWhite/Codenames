@@ -7,26 +7,31 @@
 //
 
 import UIKit
+import AVFoundation
 
 class CardCollectionViewController: UIViewController, CodenamesLogic {
 
-    @IBOutlet weak var deteilView: UIView!
+    
+    @IBOutlet weak var detailView: DetailView!
+    
     @IBOutlet weak var cardCollection: UICollectionView!
     
     let gameLogic = GameLogic()
     
     let spaceBetweenCell: Double = 5
     let colontitul: Double = 10
-    let numberOfCardinLine = 5
+    let numberOfCardInLine = 5
+    let numberOfCards = 25
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        deteilView.backgroundColor = .systemPink
+        
         cardCollection.delegate = self
         cardCollection.dataSource = self
         cardCollection.register(UINib(nibName: "CardCollectionCell", bundle: nil), forCellWithReuseIdentifier: "cardCell")
         cardCollection.isUserInteractionEnabled = true
         self.gameLogic.delegate = self
+        (cardCollection.collectionViewLayout as? UICollectionViewFlowLayout)?.estimatedItemSize = .zero
         
         
     }
@@ -47,7 +52,7 @@ extension CardCollectionViewController: UICollectionViewDelegate, UICollectionVi
         
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 25
+        return numberOfCards
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = cardCollection?.dequeueReusableCell(withReuseIdentifier: "cardCell", for: indexPath)  else {
@@ -75,8 +80,8 @@ extension CardCollectionViewController: UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cardWight = (Double(cardCollection.bounds.width) - Double(numberOfCardinLine-1) * spaceBetweenCell) / Double(numberOfCardinLine)
-        let cardHeight = (Double(cardCollection.bounds.height) - Double(numberOfCardinLine-1) * spaceBetweenCell - colontitul * 2) / Double(numberOfCardinLine)
+        let cardWight = (Double(cardCollection.bounds.width) - Double(numberOfCardInLine-1) * spaceBetweenCell) / Double(numberOfCardInLine)
+        let cardHeight = (Double(cardCollection.bounds.height) - Double(numberOfCardInLine-1) * spaceBetweenCell - colontitul * 2) / Double(numberOfCardInLine)
         return CGSize(width: cardWight, height: cardHeight)
     }
 }

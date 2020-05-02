@@ -24,48 +24,48 @@ class CardCollectionCell: UICollectionViewCell {
         case black
         case yellow
     }
-    var color: CardColor
-    var content: CardContent
+    var color: CardColor?
+    var content: CardContent?
     
-    override init(frame: CGRect) {
-        
-    }
     
-    init(frame: CGRect, color: CardColor, content: CardContent) {
-        super.init(frame: frame)
-        self.color = color
-        self.content = content
-    }
+//    init(frame: CGRect, color: CardColor, content: CardContent) {
+//        self.color = color
+//        self.content = content
+//        super.init(frame: frame)
+//
+//    }
 
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+//    required init?(coder: NSCoder) {
+//        super.init(coder: coder)
+//
+//    }
     
     func colorOfCurrentCard(info:CardColor) -> UIColor {
         switch info {
         case .red:
-            return UIColor()
+            return .red
         case .blue:
-            return UIColor()
+            return .blue
         case .black:
-            return UIColor()
+            return .black
         case .yellow:
-            return UIColor()
+            return .yellow
         }
     }
     override func awakeFromNib() {
         super.awakeFromNib()
-        //self.
-        //selectionStyle = .none
+        
         contentMode = .scaleAspectFill
         layer.cornerRadius = 16
         
-        cardLabel.lineBreakMode = .byWordWrapping
-        cardLabel.numberOfLines = 0
-        cardLabel.adjustsFontSizeToFitWidth = true
-        cardLabel.textAlignment = .center
-        cardLabel.textColor = .white
-        cardLabel.translatesAutoresizingMaskIntoConstraints = false
+        cardLabel?.lineBreakMode = .byWordWrapping
+        cardLabel?.numberOfLines = 0
+        cardLabel?.adjustsFontSizeToFitWidth = true
+        cardLabel?.textAlignment = .center
+        cardLabel?.textColor = .white
+        cardLabel?.translatesAutoresizingMaskIntoConstraints = false
+        
+        
         
         
         

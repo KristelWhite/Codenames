@@ -19,6 +19,7 @@
 		639C6CE02458855F0042E635 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 639C6CDF2458855F0042E635 /* Assets.xcassets */; };
 		639C6CE32458855F0042E635 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 639C6CE12458855F0042E635 /* LaunchScreen.storyboard */; };
 		639C6CEE2458855F0042E635 /* CodenamesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639C6CED2458855F0042E635 /* CodenamesTests.swift */; };
+		63C68DF0245DB3CA00FC76F4 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C68DEF245DB3CA00FC76F4 /* DetailView.swift */; };
 		D7403E63CE6018634899B667 /* Pods_CodenamesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FB4D6896ED5B64C64349F3A /* Pods_CodenamesTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		639C6CE92458855F0042E635 /* CodenamesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodenamesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		639C6CED2458855F0042E635 /* CodenamesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodenamesTests.swift; sourceTree = "<group>"; };
 		639C6CEF2458855F0042E635 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63C68DEF245DB3CA00FC76F4 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		7C3F5C79F39D37D85A6DB1DD /* Pods-Codenames.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Codenames.debug.xcconfig"; path = "Target Support Files/Pods-Codenames/Pods-Codenames.debug.xcconfig"; sourceTree = "<group>"; };
 		F6851B4BE418BD2EDEC9135B /* Pods_Codenames.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Codenames.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -101,6 +103,7 @@
 			children = (
 				631EED77245CBD9800BD0091 /* Cell */,
 				631EED78245CBDF200BD0091 /* CardCollectionViewController.swift */,
+				63C68DEF245DB3CA00FC76F4 /* DetailView.swift */,
 			);
 			path = CardPageController;
 			sourceTree = "<group>";
@@ -148,12 +151,12 @@
 			children = (
 				63839D95245D578C00657441 /* Logic */,
 				631EED76245CBD7100BD0091 /* CardPageController */,
-				639C6CD32458855A0042E635 /* AppDelegate.swift */,
 				639C6CD92458855A0042E635 /* Main.storyboard */,
 				639C6CDF2458855F0042E635 /* Assets.xcassets */,
 				639C6CE12458855F0042E635 /* LaunchScreen.storyboard */,
 				639C6CE42458855F0042E635 /* Info.plist */,
 				639C6CDC2458855A0042E635 /* Codenames.xcdatamodeld */,
+				639C6CD32458855A0042E635 /* AppDelegate.swift */,
 			);
 			path = Codenames;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63839D97245D57A300657441 /* GameLogic.swift in Sources */,
+				63C68DF0245DB3CA00FC76F4 /* DetailView.swift in Sources */,
 				639C6CDE2458855A0042E635 /* Codenames.xcdatamodeld in Sources */,
 				631EED79245CBDF200BD0091 /* CardCollectionViewController.swift in Sources */,
 				631EED7C245CBED600BD0091 /* CardCollectionCell.swift in Sources */,
