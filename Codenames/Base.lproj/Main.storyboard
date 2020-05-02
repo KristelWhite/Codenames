@@ -38,10 +38,27 @@
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uq3-tL-42s" customClass="DetailView" customModule="Codenames" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="333" width="896" height="81"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yKN-gh-aRi">
+                                        <rect key="frame" x="427" y="0.0" width="42" height="81"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="81" id="VNa-c5-AIZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <gestureRecognizers/>
                                 <constraints>
+                                    <constraint firstItem="yKN-gh-aRi" firstAttribute="centerX" secondItem="uq3-tL-42s" secondAttribute="centerX" id="2OR-vZ-N0v"/>
                                     <constraint firstAttribute="height" constant="81" id="776-PG-dqh"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="yLv-u0-NHg" appends="YES" id="XeX-bg-fbI"/>
+                                    <outletCollection property="gestureRecognizers" destination="R9f-KA-QeA" appends="YES" id="wNK-dT-Bgg"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -59,9 +76,21 @@
                     <connections>
                         <outlet property="cardCollection" destination="K1Q-PO-2GU" id="jcB-7A-2YQ"/>
                         <outlet property="detailView" destination="uq3-tL-42s" id="eNd-g8-5Qz"/>
+                        <outlet property="heightScore" destination="VNa-c5-AIZ" id="w1e-Yv-AUg"/>
+                        <outlet property="higthDetailView" destination="776-PG-dqh" id="rvQ-rW-irh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="up" id="yLv-u0-NHg">
+                    <connections>
+                        <action selector="upSwipeDetailView:" destination="BYZ-38-t0r" id="Gr8-4b-21H"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="R9f-KA-QeA">
+                    <connections>
+                        <action selector="downSwipeDetailView:" destination="BYZ-38-t0r" id="8PZ-op-rSz"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="138.61607142857142" y="101.44927536231884"/>
         </scene>

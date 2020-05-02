@@ -32,6 +32,7 @@ class CardCollectionViewController: UIViewController, CodenamesLogic {
         cardCollection.isUserInteractionEnabled = true
         self.gameLogic.delegate = self
         (cardCollection.collectionViewLayout as? UICollectionViewFlowLayout)?.estimatedItemSize = .zero
+        heightScore.constant = normalSizeDetailView
         
         
     }
@@ -40,9 +41,36 @@ class CardCollectionViewController: UIViewController, CodenamesLogic {
     }
 
     
+    let normalSizeDetailView: CGFloat = 81
+    let largthSizeDetailView: CGFloat = 160
+    
+    @IBOutlet weak var heightScore: NSLayoutConstraint!
+    @IBOutlet weak var higthDetailView: NSLayoutConstraint!
+    
+    @IBAction func downSwipeDetailView(_ sender: UISwipeGestureRecognizer) {
+        sender.direction = .down
+                if (higthDetailView.constant > normalSizeDetailView) {
+        
+                    higthDetailView.constant = normalSizeDetailView
+                }
+    }
+    @IBAction func upSwipeDetailView(_ sender: UISwipeGestureRecognizer) {
+        sender.direction = .up
+        if (higthDetailView.constant < largthSizeDetailView) {
+            higthDetailView.constant = largthSizeDetailView
+            UIView.ani
+            }
+        
+            
+        }
+        
+   
+    
+    
+    }
+    
+    
 
-
-}
 
 extension CardCollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
