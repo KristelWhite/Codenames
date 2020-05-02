@@ -11,6 +11,11 @@ import AVFoundation
 
 class CardCollectionViewController: UIViewController, CodenamesLogic {
 
+    @IBOutlet weak var doublePointLabel: UILabel!
+    @IBOutlet weak var scoreBlueLabel: UILabel!
+    @IBOutlet weak var scoreRedLabel: UILabel!
+  
+    @IBOutlet weak var lineLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var keyButton: UIButton!
     
@@ -44,8 +49,18 @@ class CardCollectionViewController: UIViewController, CodenamesLogic {
         topKey.constant = 12
         higthKey.constant = normalSizeDetailView - 2 * topKey.constant
         keyButton.backgroundColor = .black
-        scoreLabel.text = "8   :   9"
-        scoreLabel.font = UIFont.systemFont(ofSize: 55, weight: .ultraLight)
+        
+        scoreRedLabel.text = "8"
+        scoreRedLabel.font = UIFont.systemFont(ofSize: 55, weight: .semibold)
+        lineLabel.text = "-"
+        lineLabel.font = UIFont.systemFont(ofSize: 170, weight: .ultraLight)
+        lineLabel.textColor = .darkGray
+        scoreBlueLabel.text = "9"
+        scoreBlueLabel.font = UIFont.systemFont(ofSize: 55, weight: .semibold)
+        scoreRedLabel.textColor = .systemRed
+        scoreBlueLabel.textColor = .systemBlue
+        doublePointLabel.text = ":"
+        doublePointLabel.font = UIFont.systemFont(ofSize: 55, weight: .semibold)
         
     }
     func gameDidEnd() {
@@ -59,8 +74,11 @@ class CardCollectionViewController: UIViewController, CodenamesLogic {
         return self.largthSizeDetailView - self.normalSizeDetailView
     }
     
+ 
+
     @IBOutlet weak var heightScore: NSLayoutConstraint!
     @IBOutlet weak var higthDetailView: NSLayoutConstraint!
+    
     
     @IBAction func downSwipeDetailView(_ sender: UISwipeGestureRecognizer) {
         sender.direction = .down
@@ -82,7 +100,10 @@ class CardCollectionViewController: UIViewController, CodenamesLogic {
         
     @IBOutlet weak var leadKey: NSLayoutConstraint!
     @IBOutlet weak var higthKey: NSLayoutConstraint!
+
+   
     @IBOutlet weak var trailingKey: NSLayoutConstraint!
+    
     @IBOutlet weak var topKey: NSLayoutConstraint!
     
 }
