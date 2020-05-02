@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		3BDD922766899A95CB246279 /* Pods_Codenames.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6851B4BE418BD2EDEC9135B /* Pods_Codenames.framework */; };
 		631EED74245CB94F00BD0091 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 631EED73245CB94F00BD0091 /* GoogleService-Info.plist */; };
+		631EED79245CBDF200BD0091 /* CardCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631EED78245CBDF200BD0091 /* CardCollectionViewController.swift */; };
+		631EED7C245CBED600BD0091 /* CardCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631EED7A245CBED600BD0091 /* CardCollectionCell.swift */; };
+		631EED7D245CBED600BD0091 /* CardCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 631EED7B245CBED600BD0091 /* CardCollectionCell.xib */; };
+		63839D97245D57A300657441 /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63839D96245D57A300657441 /* GameLogic.swift */; };
 		639C6CD42458855A0042E635 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639C6CD32458855A0042E635 /* AppDelegate.swift */; };
 		639C6CD82458855A0042E635 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639C6CD72458855A0042E635 /* ViewController.swift */; };
 		639C6CDB2458855A0042E635 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 639C6CD92458855A0042E635 /* Main.storyboard */; };
@@ -35,6 +39,10 @@
 		4EADB0F2023C89B3AE0DE012 /* Pods-CodenamesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodenamesTests.release.xcconfig"; path = "Target Support Files/Pods-CodenamesTests/Pods-CodenamesTests.release.xcconfig"; sourceTree = "<group>"; };
 		5478DA1229674590971A4CB9 /* Pods-Codenames.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Codenames.release.xcconfig"; path = "Target Support Files/Pods-Codenames/Pods-Codenames.release.xcconfig"; sourceTree = "<group>"; };
 		631EED73245CB94F00BD0091 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		631EED78245CBDF200BD0091 /* CardCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewController.swift; sourceTree = "<group>"; };
+		631EED7A245CBED600BD0091 /* CardCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionCell.swift; sourceTree = "<group>"; };
+		631EED7B245CBED600BD0091 /* CardCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionCell.xib; sourceTree = "<group>"; };
+		63839D96245D57A300657441 /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
 		639C6CD02458855A0042E635 /* Codenames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Codenames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		639C6CD32458855A0042E635 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		639C6CD72458855A0042E635 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +98,32 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		631EED76245CBD7100BD0091 /* CardPageController */ = {
+			isa = PBXGroup;
+			children = (
+				631EED77245CBD9800BD0091 /* Cell */,
+				631EED78245CBDF200BD0091 /* CardCollectionViewController.swift */,
+			);
+			path = CardPageController;
+			sourceTree = "<group>";
+		};
+		631EED77245CBD9800BD0091 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				631EED7A245CBED600BD0091 /* CardCollectionCell.swift */,
+				631EED7B245CBED600BD0091 /* CardCollectionCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		63839D95245D578C00657441 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				63839D96245D57A300657441 /* GameLogic.swift */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
 		639C6CC72458855A0042E635 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +148,8 @@
 		639C6CD22458855A0042E635 /* Codenames */ = {
 			isa = PBXGroup;
 			children = (
+				63839D95245D578C00657441 /* Logic */,
+				631EED76245CBD7100BD0091 /* CardPageController */,
 				639C6CD32458855A0042E635 /* AppDelegate.swift */,
 				639C6CD72458855A0042E635 /* ViewController.swift */,
 				639C6CD92458855A0042E635 /* Main.storyboard */,
@@ -220,6 +256,7 @@
 			files = (
 				639C6CE32458855F0042E635 /* LaunchScreen.storyboard in Resources */,
 				631EED74245CB94F00BD0091 /* GoogleService-Info.plist in Resources */,
+				631EED7D245CBED600BD0091 /* CardCollectionCell.xib in Resources */,
 				639C6CE02458855F0042E635 /* Assets.xcassets in Resources */,
 				639C6CDB2458855A0042E635 /* Main.storyboard in Resources */,
 			);
@@ -304,7 +341,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				639C6CD82458855A0042E635 /* ViewController.swift in Sources */,
+				63839D97245D57A300657441 /* GameLogic.swift in Sources */,
 				639C6CDE2458855A0042E635 /* Codenames.xcdatamodeld in Sources */,
+				631EED79245CBDF200BD0091 /* CardCollectionViewController.swift in Sources */,
+				631EED7C245CBED600BD0091 /* CardCollectionCell.swift in Sources */,
 				639C6CD42458855A0042E635 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
