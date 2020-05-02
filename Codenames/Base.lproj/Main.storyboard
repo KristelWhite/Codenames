@@ -40,14 +40,14 @@
                                 <rect key="frame" x="0.0" y="333" width="896" height="81"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxS-Zk-BcP">
-                                        <rect key="frame" x="20" y="20" width="355" height="41"/>
+                                        <rect key="frame" x="20" y="20" width="335" height="41"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="41" id="KjN-XH-ipZ"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                     </button>
-                                    <stackView opaque="NO" contentMode="scaleAspectFit" misplaced="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="U9o-Th-IgU">
-                                        <rect key="frame" x="375" y="24" width="146" height="20.5"/>
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" misplaced="YES" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="U9o-Th-IgU">
+                                        <rect key="frame" x="375" y="24" width="186" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZk-pd-x1o">
                                                 <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
@@ -56,13 +56,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N4L-zi-2nu">
-                                                <rect key="frame" x="52" y="0.0" width="42" height="20.5"/>
+                                                <rect key="frame" x="72" y="0.0" width="42" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6A-BI-uke">
-                                                <rect key="frame" x="104" y="0.0" width="42" height="20.5"/>
+                                                <rect key="frame" x="144" y="0.0" width="42" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -78,6 +78,21 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <stackView opaque="NO" contentMode="scaleAspectFill" misplaced="YES" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="XG8-vG-ePb">
+                                        <rect key="frame" x="75" y="0.0" width="55" height="72"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZQ-BA-ZkO">
+                                                <rect key="frame" x="0.0" y="0.0" width="55" height="30"/>
+                                                <color key="tintColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button1"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nX-Fe-1PI">
+                                                <rect key="frame" x="0.0" y="42" width="55" height="30"/>
+                                                <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button2"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <gestureRecognizers/>
@@ -85,8 +100,10 @@
                                     <constraint firstAttribute="height" constant="81" id="776-PG-dqh"/>
                                     <constraint firstItem="1qu-MF-54d" firstAttribute="centerX" secondItem="uq3-tL-42s" secondAttribute="centerX" id="As4-f2-vVQ"/>
                                     <constraint firstItem="U9o-Th-IgU" firstAttribute="centerX" secondItem="uq3-tL-42s" secondAttribute="centerX" id="BIf-Ys-cC6"/>
+                                    <constraint firstAttribute="leading" secondItem="XG8-vG-ePb" secondAttribute="leading" constant="-44" id="D2X-bY-Hms"/>
                                     <constraint firstItem="hxS-Zk-BcP" firstAttribute="top" secondItem="uq3-tL-42s" secondAttribute="top" constant="20" id="EWD-Vs-nOM"/>
                                     <constraint firstItem="U9o-Th-IgU" firstAttribute="leading" secondItem="hxS-Zk-BcP" secondAttribute="trailing" id="Rak-jh-z9M"/>
+                                    <constraint firstItem="XG8-vG-ePb" firstAttribute="top" secondItem="hxS-Zk-BcP" secondAttribute="bottom" constant="12" id="Wh3-n1-cBS"/>
                                     <constraint firstItem="hxS-Zk-BcP" firstAttribute="leading" secondItem="uq3-tL-42s" secondAttribute="leading" constant="20" id="acu-oC-jtN"/>
                                     <constraint firstItem="U9o-Th-IgU" firstAttribute="top" secondItem="uq3-tL-42s" secondAttribute="top" id="bAi-j6-VJ5"/>
                                     <constraint firstItem="1qu-MF-54d" firstAttribute="centerY" secondItem="uq3-tL-42s" secondAttribute="top" constant="-6" id="qAH-hq-QgP"/>
@@ -113,6 +130,7 @@
                         <outlet property="cardCollection" destination="K1Q-PO-2GU" id="jcB-7A-2YQ"/>
                         <outlet property="detailView" destination="uq3-tL-42s" id="eNd-g8-5Qz"/>
                         <outlet property="doublePointLabel" destination="N4L-zi-2nu" id="CbD-it-jTR"/>
+                        <outlet property="gameRight" destination="dZQ-BA-ZkO" id="25k-xV-f9v"/>
                         <outlet property="heightScore" destination="u8K-xC-S1q" id="i4v-6Z-2oe"/>
                         <outlet property="higthDetailView" destination="776-PG-dqh" id="rvQ-rW-irh"/>
                         <outlet property="higthKey" destination="KjN-XH-ipZ" id="fyt-tE-f9r"/>

@@ -11,12 +11,14 @@ import AVFoundation
 
 class CardCollectionViewController: UIViewController, CodenamesLogic {
 
+    @IBOutlet weak var gameRight: UIButton!
+    
     @IBOutlet weak var doublePointLabel: UILabel!
     @IBOutlet weak var scoreBlueLabel: UILabel!
     @IBOutlet weak var scoreRedLabel: UILabel!
   
     @IBOutlet weak var lineLabel: UILabel!
-    @IBOutlet weak var scoreLabel: UILabel!
+   
     @IBOutlet weak var keyButton: UIButton!
     
     @IBOutlet weak var detailView: DetailView!
@@ -62,6 +64,8 @@ class CardCollectionViewController: UIViewController, CodenamesLogic {
         doublePointLabel.text = ":"
         doublePointLabel.font = UIFont.systemFont(ofSize: 55, weight: .semibold)
         
+        gameRight?.heightAnchor.constraint(equalToConstant: 24)
+        
     }
     func gameDidEnd() {
         print()
@@ -69,7 +73,7 @@ class CardCollectionViewController: UIViewController, CodenamesLogic {
 
     
     let normalSizeDetailView: CGFloat = 81
-    let largthSizeDetailView: CGFloat = 130
+    let largthSizeDetailView: CGFloat = 165
     func exchangOfDetailSize() -> CGFloat {
         return self.largthSizeDetailView - self.normalSizeDetailView
     }
