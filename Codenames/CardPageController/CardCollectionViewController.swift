@@ -11,6 +11,8 @@ import AVFoundation
 
 class CardCollectionViewController: UIViewController, CodenamesLogic {
 
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var keyButton: UIButton!
     
     @IBOutlet weak var detailView: DetailView!
     
@@ -23,6 +25,8 @@ class CardCollectionViewController: UIViewController, CodenamesLogic {
     let numberOfCardInLine = 5
     let numberOfCards = 25
     
+    let spaceToKeyButton: CGFloat = 44
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,8 +36,16 @@ class CardCollectionViewController: UIViewController, CodenamesLogic {
         cardCollection.isUserInteractionEnabled = true
         self.gameLogic.delegate = self
         (cardCollection.collectionViewLayout as? UICollectionViewFlowLayout)?.estimatedItemSize = .zero
-        heightScore.constant = normalSizeDetailView
         
+        heightScore.constant = normalSizeDetailView
+        higthDetailView.constant = normalSizeDetailView
+        leadKey.constant = spaceToKeyButton
+        trailingKey.constant = spaceToKeyButton * 3
+        topKey.constant = 12
+        higthKey.constant = normalSizeDetailView - 2 * topKey.constant
+        keyButton.backgroundColor = .black
+        scoreLabel.text = "8   :   9"
+        scoreLabel.font = UIFont.systemFont(ofSize: 55, weight: .ultraLight)
         
     }
     func gameDidEnd() {
@@ -42,7 +54,10 @@ class CardCollectionViewController: UIViewController, CodenamesLogic {
 
     
     let normalSizeDetailView: CGFloat = 81
-    let largthSizeDetailView: CGFloat = 160
+    let largthSizeDetailView: CGFloat = 130
+    func exchangOfDetailSize() -> CGFloat {
+        return self.largthSizeDetailView - self.normalSizeDetailView
+    }
     
     @IBOutlet weak var heightScore: NSLayoutConstraint!
     @IBOutlet weak var higthDetailView: NSLayoutConstraint!
@@ -50,24 +65,27 @@ class CardCollectionViewController: UIViewController, CodenamesLogic {
     @IBAction func downSwipeDetailView(_ sender: UISwipeGestureRecognizer) {
         sender.direction = .down
                 if (higthDetailView.constant > normalSizeDetailView) {
-        
-                    higthDetailView.constant = normalSizeDetailView
+                    
+                    UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {self.detailView.frame.origin.y += self.exchangOfDetailSize()}, completion: {finished in self.higthDetailView.constant = self.normalSizeDetailView })
+                    
                 }
     }
     @IBAction func upSwipeDetailView(_ sender: UISwipeGestureRecognizer) {
         sender.direction = .up
         if (higthDetailView.constant < largthSizeDetailView) {
             higthDetailView.constant = largthSizeDetailView
-            UIView.ani
-            }
-        
-            
+            UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {self.detailView.frame.origin.y -= self.exchangOfDetailSize()}, completion: nil)
         }
         
-   
-    
-    
     }
+ 
+        
+    @IBOutlet weak var leadKey: NSLayoutConstraint!
+    @IBOutlet weak var higthKey: NSLayoutConstraint!
+    @IBOutlet weak var trailingKey: NSLayoutConstraint!
+    @IBOutlet weak var topKey: NSLayoutConstraint!
+    
+}
     
     
 
