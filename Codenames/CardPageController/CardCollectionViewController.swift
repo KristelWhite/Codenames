@@ -28,6 +28,7 @@ class CardCollectionViewController: UIViewController, CodenamesLogic {
         cardCollection.isUserInteractionEnabled = true
         self.gameLogic.delegate = self
         
+        
     }
     func gameDidEnd() {
         print()
@@ -38,7 +39,7 @@ class CardCollectionViewController: UIViewController, CodenamesLogic {
 
 }
 
-extension CardCollectionViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+extension CardCollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as? CardCollectionCell
@@ -49,10 +50,11 @@ extension CardCollectionViewController: UICollectionViewDelegateFlowLayout, UICo
         return 25
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = cardCollection.dequeueReusableCell(withReuseIdentifier: "cardCell", for: indexPath) as? CardCollectionCell else {
+        guard let cell = cardCollection?.dequeueReusableCell(withReuseIdentifier: "cardCell", for: indexPath)  else {
             return UICollectionViewCell()
         }
         //dataSourse
+        
         return cell
     }
     

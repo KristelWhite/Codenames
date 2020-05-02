@@ -15,8 +15,8 @@ protocol CodenamesLogic: class {
 class GameLogic {
     weak var delegate: CodenamesLogic?
     
-    func cardDidOpen(cell : CardCollectionCell?) -> Void {
-        
-    }
+   func cardDidOpen(cell : CardCollectionCell?) -> Void {
+           self.delegate?.gameDidEnd()
+      }
     
 }

@@ -14,7 +14,6 @@
 		631EED7D245CBED600BD0091 /* CardCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 631EED7B245CBED600BD0091 /* CardCollectionCell.xib */; };
 		63839D97245D57A300657441 /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63839D96245D57A300657441 /* GameLogic.swift */; };
 		639C6CD42458855A0042E635 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639C6CD32458855A0042E635 /* AppDelegate.swift */; };
-		639C6CD82458855A0042E635 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639C6CD72458855A0042E635 /* ViewController.swift */; };
 		639C6CDB2458855A0042E635 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 639C6CD92458855A0042E635 /* Main.storyboard */; };
 		639C6CDE2458855A0042E635 /* Codenames.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 639C6CDC2458855A0042E635 /* Codenames.xcdatamodeld */; };
 		639C6CE02458855F0042E635 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 639C6CDF2458855F0042E635 /* Assets.xcassets */; };
@@ -45,7 +44,6 @@
 		63839D96245D57A300657441 /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
 		639C6CD02458855A0042E635 /* Codenames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Codenames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		639C6CD32458855A0042E635 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		639C6CD72458855A0042E635 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		639C6CDA2458855A0042E635 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		639C6CDD2458855A0042E635 /* Codenames.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Codenames.xcdatamodel; sourceTree = "<group>"; };
 		639C6CDF2458855F0042E635 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -151,7 +149,6 @@
 				63839D95245D578C00657441 /* Logic */,
 				631EED76245CBD7100BD0091 /* CardPageController */,
 				639C6CD32458855A0042E635 /* AppDelegate.swift */,
-				639C6CD72458855A0042E635 /* ViewController.swift */,
 				639C6CD92458855A0042E635 /* Main.storyboard */,
 				639C6CDF2458855F0042E635 /* Assets.xcassets */,
 				639C6CE12458855F0042E635 /* LaunchScreen.storyboard */,
@@ -340,7 +337,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				639C6CD82458855A0042E635 /* ViewController.swift in Sources */,
 				63839D97245D57A300657441 /* GameLogic.swift in Sources */,
 				639C6CDE2458855A0042E635 /* Codenames.xcdatamodeld in Sources */,
 				631EED79245CBDF200BD0091 /* CardCollectionViewController.swift in Sources */,

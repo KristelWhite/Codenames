@@ -50,6 +50,11 @@
                 <constraint firstAttribute="bottom" secondItem="TfC-X6-bQ9" secondAttribute="bottom" id="pDE-xn-FxM"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="cardImage" destination="aFf-ct-Vrz" id="cBc-Sf-npd"/>
+                <outlet property="cardLabel" destination="6Vm-wr-9i0" id="qht-WK-LEP"/>
+                <outlet property="view" destination="TfC-X6-bQ9" id="TuF-ot-b7g"/>
+            </connections>
             <point key="canvasLocation" x="139" y="118"/>
         </collectionViewCell>
     </objects>
