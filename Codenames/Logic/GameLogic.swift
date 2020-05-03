@@ -18,15 +18,15 @@ class GameLogic {
     var scoreRedCard: Int = 8
     var scoreBlueCard: Int = 8
     
-//    enum Content {
-//        case labels(arrayLabels: Array<String>)
-//        case Images(arrayImages: Array<UIImage>)
-//    }
-    let gameContent: Array<String>
+    enum Content {
+        case labels(arrayLabels: Array<String>)
+        case images(arrayImages: Array<UIImage>)
+    }
+    let gameContent: Content
     
     //сделать let и присваивать функции, а в этой функции определять кто первый ходит и конечный вариант массива
     var colorArray: Array<CardCollectionCell.CardColor> = [.black, .yellow, .yellow, .yellow, .yellow, .yellow, .yellow, .yellow, .blue, .blue, .blue, .blue, .blue, .blue, .blue, .blue, .red, .red, .red, .red, .red, .red, .red, .red]
-    //let redStartsGame = Int.random(in: 0...1)
+    
     let blueStarsGame = Bool.random()
     
    func cardDidOpen(cell : CardCollectionCell?) -> Void {
@@ -61,7 +61,8 @@ class GameLogic {
         //если слова то
         var wordsArray = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25"]
         wordsArray.shuffle()
-        gameContent = wordsArray
+        gameContent = .labels(arrayLabels: wordsArray)
+        
         
         self.setupStartColor()
         colorArray.shuffle()

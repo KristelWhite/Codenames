@@ -112,6 +112,7 @@ class CardCollectionViewController: UIViewController, CodenamesLogic {
     
     
     @IBAction func tapUpKey(_ sender: Any) {
+        
         for cell in cardCollection.visibleCells {
             let card = cell as? CardCollectionCell
             if !card!.isCardSelected {
@@ -182,9 +183,14 @@ extension CardCollectionViewController: UICollectionViewDelegate, UICollectionVi
         //инкапсулировать
         
         cell.color = self.gameLogic.colorArray[indexPath.row]
-         //узнаем что нужно картинки или текст, если текст
-        //cell.content = .label(label: self.gameLogic.gameContent[indexPath.row])
-        cell.cardLabel.text = self.gameLogic.gameContent[indexPath.row]
+        
+        switch self.gameLogic.gameContent {
+        case .labels(let label):
+            cell.cardLabel.text = label[indexPath.row]
+        case .images(let image):
+            cell.cardImage.image = image[indexPath.row]
+        
+        }
         return cell
     }
     

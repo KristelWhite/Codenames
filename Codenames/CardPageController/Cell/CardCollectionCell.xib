@@ -29,7 +29,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="6Vm-wr-9i0" secondAttribute="bottom" id="1Po-L6-LCD"/>
                             <constraint firstItem="6Vm-wr-9i0" firstAttribute="leading" secondItem="TfC-X6-bQ9" secondAttribute="leading" id="9oL-28-7K1"/>
