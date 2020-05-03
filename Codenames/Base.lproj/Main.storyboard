@@ -8,6 +8,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--New Game View Controller-->
+        <scene sceneID="FKw-YF-w3r">
+            <objects>
+                <viewController id="rjz-vm-MU4" customClass="NewGameViewController" customModule="Codenames" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L2I-G9-Q5T">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="soe-zD-dXg"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="MqW-zb-rsY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r3Y-di-9X5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="-713"/>
+        </scene>
         <!--Card Collection View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -160,6 +176,51 @@
                 </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="138.61607142857142" y="101.44927536231884"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dZw-YO-f9x">
+            <objects>
+                <viewController id="RAk-W5-0td" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qNp-G2-zp1">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="VaG-Pt-Om5"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kUY-fv-opC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-529" y="100"/>
+        </scene>
+        <!--Rulls View Controller-->
+        <scene sceneID="wm0-6n-TcH">
+            <objects>
+                <viewController id="at5-IT-XFe" customClass="RullsViewController" customModule="Codenames" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Owr-Y6-g5b">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="1ki-hA-Ic6"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qAA-vU-6NC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="948"/>
+        </scene>
+        <!--Game Over View Controller-->
+        <scene sceneID="g91-oG-mVV">
+            <objects>
+                <viewController id="2vZ-9c-2iy" customClass="GameOverViewController" customModule="Codenames" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qaK-qe-Va5">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="hLf-eu-u1h"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5qW-JE-pD9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="804" y="101"/>
         </scene>
     </scenes>
 </document>
