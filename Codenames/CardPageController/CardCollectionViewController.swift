@@ -7,9 +7,10 @@
 //
 
 import UIKit
-import AVFoundation
+//import AVFoundation
 
 class CardCollectionViewController: UIViewController, CodenamesLogic {
+    
 
     @IBOutlet weak var gameRight: UIButton!
     
@@ -52,12 +53,12 @@ class CardCollectionViewController: UIViewController, CodenamesLogic {
         higthKey.constant = normalSizeDetailView - 2 * topKey.constant
         keyButton.backgroundColor = .black
         
-        scoreRedLabel.text = "8"
+        scoreRedLabel.text = String(self.gameLogic.scoreRedCard)
         scoreRedLabel.font = UIFont.systemFont(ofSize: 55, weight: .semibold)
         lineLabel.text = "-"
         lineLabel.font = UIFont.systemFont(ofSize: 170, weight: .ultraLight)
         lineLabel.textColor = .darkGray
-        scoreBlueLabel.text = "9"
+        scoreBlueLabel.text = String(self.gameLogic.scoreBlueCard)
         scoreBlueLabel.font = UIFont.systemFont(ofSize: 55, weight: .semibold)
         scoreRedLabel.textColor = .systemRed
         scoreBlueLabel.textColor = .systemBlue
@@ -66,11 +67,59 @@ class CardCollectionViewController: UIViewController, CodenamesLogic {
         
         gameRight?.heightAnchor.constraint(equalToConstant: 24)
         
+        setupGamefBackgroundColor()
+        
     }
-    func gameDidEnd() {
+    func gameDidEnd(messege message: String) {
         print()
+        //вызов модального окна
     }
-
+    func setupGamefBackgroundColor() {
+        print("фон установлен")
+        let color: UIColor
+        if self.gameLogic.blueStarsGame {
+            color = .systemBlue
+            self.view.backgroundColor = color
+            self.cardCollection.backgroundColor = color
+        } else {
+            color = .systemRed
+            self.view.backgroundColor = color
+            self.cardCollection.backgroundColor = color
+        }
+        
+        
+    }
+     func changeScore(isBlueCard: Bool, score: Int) {
+        if isBlueCard {
+            scoreBlueLabel.text = String(score)
+        } else {
+            scoreRedLabel.text = String(score)
+        }
+     }
+    
+    @IBAction func tapDownKey(_ sender: Any) {
+        
+        for cell in cardCollection.visibleCells {
+            let card = cell as? CardCollectionCell
+            if !card!.isCardSelected {
+                card?.view.backgroundColor = card?.colorOfCurrentCard(info: (card!.color))
+            }
+            
+        }
+            
+        
+    }
+    
+    
+    @IBAction func tapUpKey(_ sender: Any) {
+        for cell in cardCollection.visibleCells {
+            let card = cell as? CardCollectionCell
+            if !card!.isCardSelected {
+                card?.view.backgroundColor = card?.defoultColor
+            }
+            
+        }
+    }
     
     let normalSizeDetailView: CGFloat = 81
     let largthSizeDetailView: CGFloat = 165
@@ -119,6 +168,7 @@ extension CardCollectionViewController: UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as? CardCollectionCell
+        cell?.view.backgroundColor = cell?.colorOfCurrentCard(info: cell!.color )
         self.gameLogic.cardDidOpen(cell: cell)
         
     }
@@ -126,11 +176,15 @@ extension CardCollectionViewController: UICollectionViewDelegate, UICollectionVi
         return numberOfCards
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = cardCollection?.dequeueReusableCell(withReuseIdentifier: "cardCell", for: indexPath)  else {
+        guard let cell = cardCollection?.dequeueReusableCell(withReuseIdentifier: "cardCell", for: indexPath) as? CardCollectionCell  else {
             return UICollectionViewCell()
         }
-        //dataSourse
+        //инкапсулировать
         
+        cell.color = self.gameLogic.colorArray[indexPath.row]
+         //узнаем что нужно картинки или текст, если текст
+        //cell.content = .label(label: self.gameLogic.gameContent[indexPath.row])
+        cell.cardLabel.text = self.gameLogic.gameContent[indexPath.row]
         return cell
     }
     

@@ -14,18 +14,20 @@ class CardCollectionCell: UICollectionViewCell {
     @IBOutlet weak var cardLabel: UILabel!
     @IBOutlet weak var cardImage: UIImageView!
     
-    enum CardContent {
-        case label(label:UILabel)
-        case image(image:UIImage)
-    }
+//    enum CardContent {
+//        case label(label:String)
+//        case image(image:UIImage)
+//    }
     enum CardColor {
         case red
         case blue
         case black
         case yellow
     }
-    var color: CardColor?
-    var content: CardContent?
+    var color: CardColor = .yellow
+    var isCardSelected: Bool = false
+    let defoultColor: UIColor = .gray
+    //var content: CardContent = .label(label: "defoult")
     
     
 //    init(frame: CGRect, color: CardColor, content: CardContent) {
@@ -62,10 +64,10 @@ class CardCollectionCell: UICollectionViewCell {
         cardLabel?.numberOfLines = 0
         cardLabel?.adjustsFontSizeToFitWidth = true
         cardLabel?.textAlignment = .center
-        cardLabel?.textColor = .white
+        cardLabel?.textColor = .black
         cardLabel?.translatesAutoresizingMaskIntoConstraints = false
         
-        
+        view.backgroundColor = defoultColor
         
         
         
