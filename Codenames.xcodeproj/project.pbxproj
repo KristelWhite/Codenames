@@ -16,6 +16,13 @@
 		638F4FE0245F501600F97289 /* RullsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F4FDF245F501600F97289 /* RullsViewController.swift */; };
 		638F4FE2245F502900F97289 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F4FE1245F502900F97289 /* GameOverViewController.swift */; };
 		638F4FE4245F503C00F97289 /* NewGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F4FE3245F503C00F97289 /* NewGameViewController.swift */; };
+		638F4FE724607C8900F97289 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F4FE624607C8900F97289 /* CoreDataManager.swift */; };
+		638F4FE924608A2800F97289 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F4FE824608A2800F97289 /* DataProvider.swift */; };
+		638F4FEB2460928400F97289 /* Dictionary+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F4FEA2460928400F97289 /* Dictionary+CoreDataProperties.swift */; };
+		638F4FED2460929600F97289 /* Content+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F4FEC2460929600F97289 /* Content+CoreDataClass.swift */; };
+		638F4FEF246092A700F97289 /* Dictionary+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F4FEE246092A700F97289 /* Dictionary+CoreDataClass.swift */; };
+		638F4FF1246092B400F97289 /* Content+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F4FF0246092B400F97289 /* Content+CoreDataProperties.swift */; };
+		638F4FF42460997500F97289 /* DictionaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F4FF32460997500F97289 /* DictionaryModel.swift */; };
 		639C6CD42458855A0042E635 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639C6CD32458855A0042E635 /* AppDelegate.swift */; };
 		639C6CDE2458855A0042E635 /* Codenames.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 639C6CDC2458855A0042E635 /* Codenames.xcdatamodeld */; };
 		639C6CE02458855F0042E635 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 639C6CDF2458855F0042E635 /* Assets.xcassets */; };
@@ -49,6 +56,13 @@
 		638F4FDF245F501600F97289 /* RullsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RullsViewController.swift; sourceTree = "<group>"; };
 		638F4FE1245F502900F97289 /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 		638F4FE3245F503C00F97289 /* NewGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGameViewController.swift; sourceTree = "<group>"; };
+		638F4FE624607C8900F97289 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		638F4FE824608A2800F97289 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		638F4FEA2460928400F97289 /* Dictionary+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Dictionary+CoreDataProperties.swift"; path = "/Users/kristina/XCodeProjects/Codenames.2/Dictionary+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		638F4FEC2460929600F97289 /* Content+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Content+CoreDataClass.swift"; path = "/Users/kristina/XCodeProjects/Codenames.2/Content+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		638F4FEE246092A700F97289 /* Dictionary+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Dictionary+CoreDataClass.swift"; path = "/Users/kristina/XCodeProjects/Codenames.2/Dictionary+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		638F4FF0246092B400F97289 /* Content+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Content+CoreDataProperties.swift"; path = "/Users/kristina/XCodeProjects/Codenames.2/Content+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		638F4FF32460997500F97289 /* DictionaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryModel.swift; sourceTree = "<group>"; };
 		639C6CD02458855A0042E635 /* Codenames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Codenames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		639C6CD32458855A0042E635 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		639C6CDD2458855A0042E635 /* Codenames.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Codenames.xcdatamodel; sourceTree = "<group>"; };
@@ -166,9 +180,30 @@
 			path = RullsController;
 			sourceTree = "<group>";
 		};
+		638F4FE524607C6100F97289 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				639C6CDC2458855A0042E635 /* Codenames.xcdatamodeld */,
+				638F4FE624607C8900F97289 /* CoreDataManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		638F4FF2246098D100F97289 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				638F4FF32460997500F97289 /* DictionaryModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		639C6CC72458855A0042E635 = {
 			isa = PBXGroup;
 			children = (
+				638F4FEE246092A700F97289 /* Dictionary+CoreDataClass.swift */,
+				638F4FEA2460928400F97289 /* Dictionary+CoreDataProperties.swift */,
+				638F4FEC2460929600F97289 /* Content+CoreDataClass.swift */,
+				638F4FF0246092B400F97289 /* Content+CoreDataProperties.swift */,
 				631EED73245CB94F00BD0091 /* GoogleService-Info.plist */,
 				639C6CD22458855A0042E635 /* Codenames */,
 				639C6CEC2458855F0042E635 /* CodenamesTests */,
@@ -190,13 +225,15 @@
 		639C6CD22458855A0042E635 /* Codenames */ = {
 			isa = PBXGroup;
 			children = (
+				638F4FF2246098D100F97289 /* Model */,
+				638F4FE524607C6100F97289 /* CoreData */,
 				638F4FDB245F4EBA00F97289 /* Controllers */,
 				63839D95245D578C00657441 /* Logic */,
 				639C6CDF2458855F0042E635 /* Assets.xcassets */,
+				638F4FE824608A2800F97289 /* DataProvider.swift */,
 				63C68DF1245DD7B600FC76F4 /* Main.storyboard */,
 				639C6CE12458855F0042E635 /* LaunchScreen.storyboard */,
 				639C6CE42458855F0042E635 /* Info.plist */,
-				639C6CDC2458855A0042E635 /* Codenames.xcdatamodeld */,
 				639C6CD32458855A0042E635 /* AppDelegate.swift */,
 			);
 			path = Codenames;
@@ -386,10 +423,17 @@
 				638F4FE4245F503C00F97289 /* NewGameViewController.swift in Sources */,
 				639C6CDE2458855A0042E635 /* Codenames.xcdatamodeld in Sources */,
 				631EED79245CBDF200BD0091 /* CardCollectionViewController.swift in Sources */,
+				638F4FE924608A2800F97289 /* DataProvider.swift in Sources */,
 				638F4FE2245F502900F97289 /* GameOverViewController.swift in Sources */,
+				638F4FF42460997500F97289 /* DictionaryModel.swift in Sources */,
+				638F4FEF246092A700F97289 /* Dictionary+CoreDataClass.swift in Sources */,
+				638F4FED2460929600F97289 /* Content+CoreDataClass.swift in Sources */,
 				631EED7C245CBED600BD0091 /* CardCollectionCell.swift in Sources */,
 				639C6CD42458855A0042E635 /* AppDelegate.swift in Sources */,
+				638F4FE724607C8900F97289 /* CoreDataManager.swift in Sources */,
 				638F4FE0245F501600F97289 /* RullsViewController.swift in Sources */,
+				638F4FEB2460928400F97289 /* Dictionary+CoreDataProperties.swift in Sources */,
+				638F4FF1246092B400F97289 /* Content+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

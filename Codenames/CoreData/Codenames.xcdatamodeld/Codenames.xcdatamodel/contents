@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Content" representedClassName="Content" syncable="YES">
+        <attribute name="image" optional="YES" attributeType="Binary"/>
+        <attribute name="word" optional="YES" attributeType="String"/>
+        <relationship name="dictionary" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Dictionary" inverseName="contents" inverseEntity="Dictionary"/>
+    </entity>
+    <entity name="Dictionary" representedClassName="Dictionary" syncable="YES">
+        <attribute name="language" optional="YES" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="type" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <relationship name="contents" optional="YES" toMany="YES" minCount="25" deletionRule="Nullify" destinationEntity="Content" inverseName="dictionary" inverseEntity="Content"/>
+    </entity>
+    <elements>
+        <element name="Dictionary" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="Content" positionX="-305.47265625" positionY="-24.1796875" width="128" height="88"/>
+    </elements>
+</model>
