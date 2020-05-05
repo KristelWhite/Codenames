@@ -11,6 +11,7 @@ import UIKit
 protocol CodenamesLogic: class {
     func gameDidEnd(messege: String)
     func changeScore(isBlueCard: Bool, score: Int )
+    var model: DictionaryModel? {get set}
 }
 
 class GameLogic {
@@ -18,11 +19,11 @@ class GameLogic {
     var scoreRedCard: Int = 8
     var scoreBlueCard: Int = 8
     
-    enum Content {
-        case labels(arrayLabels: Array<String>)
-        case images(arrayImages: Array<UIImage>)
-    }
-    var gameContent: Content
+//    enum Content {
+//        case labels(arrayLabels: Array<String>)
+//        case images(arrayImages: Array<UIImage>)
+//    }
+//    var gameContent: Content
     
     //сделать let и присваивать функции, а в этой функции определять кто первый ходит и конечный вариант массива
     var colorArray: Array<CardCollectionCell.CardColor> = [.black, .yellow, .yellow, .yellow, .yellow, .yellow, .yellow, .yellow, .blue, .blue, .blue, .blue, .blue, .blue, .blue, .blue, .red, .red, .red, .red, .red, .red, .red, .red]
@@ -57,12 +58,6 @@ class GameLogic {
     
  }
     init() {
-        //получаем масив слов или картинок от бд
-        //если слова то
-        var wordsArray = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25"]
-        wordsArray.shuffle()
-        gameContent = .labels(arrayLabels: wordsArray)
-        
         
         self.setupStartColor()
         colorArray.shuffle()
@@ -78,8 +73,15 @@ class GameLogic {
             scoreRedCard += 1
             
         }
-        
-   
+    }
+    
+    func shuffleArray() -> Void {
+        print("yes")
+        if self.delegate?.model?.type == true  {
+            self.delegate?.model?.dictContent?.word!.shuffle()
+        } else {
+            self.delegate?.model?.dictContent?.image!.shuffle()
+        }
     }
 }
  

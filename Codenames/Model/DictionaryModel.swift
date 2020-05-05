@@ -7,17 +7,16 @@
 //
 
 import UIKit
-
-class DictionaryModel {
     
-    struct Dictionary {
+    struct DictionaryModel {
         let name: String
-        let type: Bool
+        var type: Bool
         let language: String?
-        let dictContant: [Content]?
+        var dictContent: ContentModel?
     }
-    struct Content {
-        let word: [String]?
-        let image: [UIImage]?
+
+    struct ContentModel {
+        var word: [String]? 
+        var image: [UIImage]?
     }
-}
+

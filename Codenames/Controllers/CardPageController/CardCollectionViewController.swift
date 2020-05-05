@@ -11,6 +11,7 @@ import UIKit
 
 class CardCollectionViewController: UIViewController, CodenamesLogic {
     
+    var model: DictionaryModel?
 
     @IBOutlet weak var gameRight: UIButton!
     
@@ -27,7 +28,6 @@ class CardCollectionViewController: UIViewController, CodenamesLogic {
     @IBOutlet weak var cardCollection: UICollectionView!
     
     let gameLogic = GameLogic()
-    
     let spaceBetweenCell: Double = 5
     let colontitul: Double = 10
     let numberOfCardInLine = 5
@@ -37,6 +37,11 @@ class CardCollectionViewController: UIViewController, CodenamesLogic {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        model = DictionaryModel(name: "one", type: true, language: "",  dictContent: ContentModel(word: ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25"]))
+        
+        
+    
         
         cardCollection.delegate = self
         cardCollection.dataSource = self
@@ -68,6 +73,11 @@ class CardCollectionViewController: UIViewController, CodenamesLogic {
         gameRight?.heightAnchor.constraint(equalToConstant: 24)
         
         setupGamefBackgroundColor()
+        
+        self.gameLogic.shuffleArray()
+        
+        
+        
         
     }
     func gameDidEnd(messege message: String) {
@@ -184,12 +194,14 @@ extension CardCollectionViewController: UICollectionViewDelegate, UICollectionVi
         
         cell.color = self.gameLogic.colorArray[indexPath.row]
         
-        switch self.gameLogic.gameContent {
-        case .labels(let label):
-            cell.cardLabel.text = label[indexPath.row]
-        case .images(let image):
-            cell.cardImage.image = image[indexPath.row]
+        switch self.model?.type {
+        case true:
+            cell.cardLabel.text = model?.dictContent?.word?[indexPath.row]
+        case false:
+            cell.cardImage.image = model?.dictContent?.image?[indexPath.row]
         
+        default:
+            print("не указан тип")
         }
         return cell
     }
