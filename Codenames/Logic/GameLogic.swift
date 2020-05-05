@@ -22,7 +22,7 @@ class GameLogic {
         case labels(arrayLabels: Array<String>)
         case images(arrayImages: Array<UIImage>)
     }
-    let gameContent: Content
+    var gameContent: Content
     
     //сделать let и присваивать функции, а в этой функции определять кто первый ходит и конечный вариант массива
     var colorArray: Array<CardCollectionCell.CardColor> = [.black, .yellow, .yellow, .yellow, .yellow, .yellow, .yellow, .yellow, .blue, .blue, .blue, .blue, .blue, .blue, .blue, .blue, .red, .red, .red, .red, .red, .red, .red, .red]
