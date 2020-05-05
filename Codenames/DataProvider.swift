@@ -25,17 +25,32 @@ final class DataProvider {
 //        let predicate = NSPredicate(format: "dictionary.name == %@", name)
 //        request.predicate = predicate
         //request.fetchLimit =
+        
 
-        let contentArray = try? self.context.fetch(request)
+        let dictionaryArray = try? self.context.fetch(request)
 
-        if let content = contentArray, !content.isEmpty {
-
+        if let dictionaries = dictionaryArray, !dictionaries.isEmpty {
+            var dictModels: [DictionaryModel]
+            for dictionary in dictionaries {
+                var dictModel: DictionaryModel
+                dictModel.name = dictionary.name!
+                dictModel.language = dictionary.language
+                dictModel.type = dictionary.type
+                
+                var wordSet = dictionary.contents as? [Content]
+                if dictModel.type {
+                    
+                } else {
+                    
+                }
                 
             }
-               onComplite(dictModel)
+                
+            }
+               onComplite(dictModels)
         }
         else {
-            print("бд пустая по заданому словарю")
+            print("бд пустая")
             return
         }
     }

@@ -9,9 +9,9 @@
 import UIKit
     
     struct DictionaryModel {
-        let name: String
+        var name: String
         var type: Bool
-        let language: String?
+        var language: String?
         var dictContent: ContentModel?
     }
 
