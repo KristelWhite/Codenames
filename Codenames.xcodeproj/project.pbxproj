@@ -23,6 +23,14 @@
 		638F4FEF246092A700F97289 /* Dictionary+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F4FEE246092A700F97289 /* Dictionary+CoreDataClass.swift */; };
 		638F4FF1246092B400F97289 /* Content+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F4FF0246092B400F97289 /* Content+CoreDataProperties.swift */; };
 		638F4FF42460997500F97289 /* DictionaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F4FF32460997500F97289 /* DictionaryModel.swift */; };
+		638F4FF72461B6AE00F97289 /* TitleTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F4FF62461B6AE00F97289 /* TitleTableCell.swift */; };
+		638F4FF92461B6BC00F97289 /* TitleTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 638F4FF82461B6BC00F97289 /* TitleTableCell.xib */; };
+		638F4FFF2461B80D00F97289 /* CarouselTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F4FFE2461B80D00F97289 /* CarouselTableCell.swift */; };
+		638F50012461B81700F97289 /* CarouselTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 638F50002461B81700F97289 /* CarouselTableCell.xib */; };
+		638F50042461B97F00F97289 /* LabelTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F50022461B97F00F97289 /* LabelTableCell.swift */; };
+		638F50052461B97F00F97289 /* LabelTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 638F50032461B97F00F97289 /* LabelTableCell.xib */; };
+		638F50122461C37E00F97289 /* CollectionDictCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F50102461C37E00F97289 /* CollectionDictCell.swift */; };
+		638F50132461C37E00F97289 /* CollectionDictCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 638F50112461C37E00F97289 /* CollectionDictCell.xib */; };
 		639C6CD42458855A0042E635 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639C6CD32458855A0042E635 /* AppDelegate.swift */; };
 		639C6CDE2458855A0042E635 /* Codenames.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 639C6CDC2458855A0042E635 /* Codenames.xcdatamodeld */; };
 		639C6CE02458855F0042E635 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 639C6CDF2458855F0042E635 /* Assets.xcassets */; };
@@ -63,6 +71,14 @@
 		638F4FEE246092A700F97289 /* Dictionary+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Dictionary+CoreDataClass.swift"; path = "/Users/kristina/XCodeProjects/Codenames.2/Dictionary+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		638F4FF0246092B400F97289 /* Content+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Content+CoreDataProperties.swift"; path = "/Users/kristina/XCodeProjects/Codenames.2/Content+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		638F4FF32460997500F97289 /* DictionaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryModel.swift; sourceTree = "<group>"; };
+		638F4FF62461B6AE00F97289 /* TitleTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TitleTableCell.swift; path = "../../../../../../Documents/GitHub/iOSSpringSchool2020Example/iOSTest/Main Page/Cells/TitleTableCell.swift"; sourceTree = "<group>"; };
+		638F4FF82461B6BC00F97289 /* TitleTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TitleTableCell.xib; path = "../../../../../../Documents/GitHub/iOSSpringSchool2020Example/iOSTest/Main Page/Cells/TitleTableCell.xib"; sourceTree = "<group>"; };
+		638F4FFE2461B80D00F97289 /* CarouselTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarouselTableCell.swift; path = "../../../../../../Documents/GitHub/iOSSpringSchool2020Example/iOSTest/Main Page/Cells/CarouselTableCell.swift"; sourceTree = "<group>"; };
+		638F50002461B81700F97289 /* CarouselTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CarouselTableCell.xib; path = "../../../../../../Documents/GitHub/iOSSpringSchool2020Example/iOSTest/Main Page/Cells/CarouselTableCell.xib"; sourceTree = "<group>"; };
+		638F50022461B97F00F97289 /* LabelTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTableCell.swift; sourceTree = "<group>"; };
+		638F50032461B97F00F97289 /* LabelTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelTableCell.xib; sourceTree = "<group>"; };
+		638F50102461C37E00F97289 /* CollectionDictCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDictCell.swift; sourceTree = "<group>"; };
+		638F50112461C37E00F97289 /* CollectionDictCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionDictCell.xib; sourceTree = "<group>"; };
 		639C6CD02458855A0042E635 /* Codenames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Codenames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		639C6CD32458855A0042E635 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		639C6CDD2458855A0042E635 /* Codenames.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Codenames.xcdatamodel; sourceTree = "<group>"; };
@@ -159,6 +175,7 @@
 		638F4FDC245F4F0900F97289 /* NewGameController */ = {
 			isa = PBXGroup;
 			children = (
+				638F4FF52461B6A400F97289 /* Cell */,
 				638F4FE3245F503C00F97289 /* NewGameViewController.swift */,
 			);
 			path = NewGameController;
@@ -195,6 +212,21 @@
 				638F4FF32460997500F97289 /* DictionaryModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		638F4FF52461B6A400F97289 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				638F4FF82461B6BC00F97289 /* TitleTableCell.xib */,
+				638F4FF62461B6AE00F97289 /* TitleTableCell.swift */,
+				638F4FFE2461B80D00F97289 /* CarouselTableCell.swift */,
+				638F50002461B81700F97289 /* CarouselTableCell.xib */,
+				638F50022461B97F00F97289 /* LabelTableCell.swift */,
+				638F50032461B97F00F97289 /* LabelTableCell.xib */,
+				638F50102461C37E00F97289 /* CollectionDictCell.swift */,
+				638F50112461C37E00F97289 /* CollectionDictCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		639C6CC72458855A0042E635 = {
@@ -335,8 +367,12 @@
 				639C6CE32458855F0042E635 /* LaunchScreen.storyboard in Resources */,
 				63C68DF3245DD7B600FC76F4 /* Main.storyboard in Resources */,
 				631EED74245CB94F00BD0091 /* GoogleService-Info.plist in Resources */,
+				638F50052461B97F00F97289 /* LabelTableCell.xib in Resources */,
+				638F50132461C37E00F97289 /* CollectionDictCell.xib in Resources */,
 				631EED7D245CBED600BD0091 /* CardCollectionCell.xib in Resources */,
+				638F50012461B81700F97289 /* CarouselTableCell.xib in Resources */,
 				639C6CE02458855F0042E635 /* Assets.xcassets in Resources */,
+				638F4FF92461B6BC00F97289 /* TitleTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,18 +458,22 @@
 				63C68DF0245DB3CA00FC76F4 /* DetailView.swift in Sources */,
 				638F4FE4245F503C00F97289 /* NewGameViewController.swift in Sources */,
 				639C6CDE2458855A0042E635 /* Codenames.xcdatamodeld in Sources */,
+				638F4FFF2461B80D00F97289 /* CarouselTableCell.swift in Sources */,
 				631EED79245CBDF200BD0091 /* CardCollectionViewController.swift in Sources */,
 				638F4FE924608A2800F97289 /* DataProvider.swift in Sources */,
 				638F4FE2245F502900F97289 /* GameOverViewController.swift in Sources */,
 				638F4FF42460997500F97289 /* DictionaryModel.swift in Sources */,
 				638F4FEF246092A700F97289 /* Dictionary+CoreDataClass.swift in Sources */,
+				638F4FF72461B6AE00F97289 /* TitleTableCell.swift in Sources */,
 				638F4FED2460929600F97289 /* Content+CoreDataClass.swift in Sources */,
 				631EED7C245CBED600BD0091 /* CardCollectionCell.swift in Sources */,
 				639C6CD42458855A0042E635 /* AppDelegate.swift in Sources */,
 				638F4FE724607C8900F97289 /* CoreDataManager.swift in Sources */,
+				638F50122461C37E00F97289 /* CollectionDictCell.swift in Sources */,
 				638F4FE0245F501600F97289 /* RullsViewController.swift in Sources */,
 				638F4FEB2460928400F97289 /* Dictionary+CoreDataProperties.swift in Sources */,
 				638F4FF1246092B400F97289 /* Content+CoreDataProperties.swift in Sources */,
+				638F50042461B97F00F97289 /* LabelTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

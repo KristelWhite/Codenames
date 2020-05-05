@@ -16,7 +16,7 @@ import UIKit
     }
 
     struct ContentModel {
-        var word: [String]? 
+        var word: [String]?
         var image: [UIImage]?
     }
 

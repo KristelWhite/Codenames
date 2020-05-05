@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rjz-vm-MU4">
     <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -15,14 +15,44 @@
                     <view key="view" contentMode="scaleToFill" id="L2I-G9-Q5T">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p3m-40-ffI">
+                                <rect key="frame" x="0.0" y="0.0" width="905" height="271"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaG-bA-Xl5">
+                                <rect key="frame" x="348" y="303" width="200" height="70"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="2Js-BA-Ns9"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="newGame" id="GDk-GJ-cU7"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="RaG-bA-Xl5" firstAttribute="centerX" secondItem="soe-zD-dXg" secondAttribute="centerX" id="1aS-kg-OGd"/>
+                            <constraint firstItem="soe-zD-dXg" firstAttribute="bottom" secondItem="RaG-bA-Xl5" secondAttribute="bottom" constant="20" id="Cug-Oq-Rob"/>
+                            <constraint firstAttribute="trailing" secondItem="p3m-40-ffI" secondAttribute="trailing" id="FY9-Aa-sdF"/>
+                            <constraint firstItem="p3m-40-ffI" firstAttribute="top" secondItem="L2I-G9-Q5T" secondAttribute="top" id="NDa-Pj-ScY"/>
+                            <constraint firstItem="p3m-40-ffI" firstAttribute="leading" secondItem="L2I-G9-Q5T" secondAttribute="leading" id="PUv-2F-nx8"/>
+                            <constraint firstItem="soe-zD-dXg" firstAttribute="bottom" secondItem="p3m-40-ffI" secondAttribute="bottom" constant="130" id="aIc-lA-cfb"/>
+                            <constraint firstItem="RaG-bA-Xl5" firstAttribute="top" secondItem="p3m-40-ffI" secondAttribute="bottom" constant="40" id="bvg-dm-4yW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="soe-zD-dXg"/>
                     </view>
                     <navigationItem key="navigationItem" id="MqW-zb-rsY"/>
+                    <connections>
+                        <outlet property="button" destination="RaG-bA-Xl5" id="Cc6-BJ-W6T"/>
+                        <outlet property="tableView" destination="p3m-40-ffI" id="tmK-Gd-PKV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r3Y-di-9X5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="-713"/>
+            <point key="canvasLocation" x="138.61607142857142" y="-713.04347826086962"/>
         </scene>
         <!--Card Collection View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -146,6 +176,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="hJB-Qw-kqN"/>
                     <connections>
                         <outlet property="cardCollection" destination="K1Q-PO-2GU" id="jcB-7A-2YQ"/>
                         <outlet property="detailView" destination="uq3-tL-42s" id="eNd-g8-5Qz"/>
