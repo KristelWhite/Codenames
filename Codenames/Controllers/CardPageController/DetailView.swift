@@ -9,6 +9,7 @@
 import UIKit
 
 class DetailView: UIView {
+    
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -22,7 +23,7 @@ class DetailView: UIView {
     func setup() -> Void {
         self.isOpaque = false
         self.alpha = 0.7
-        self.backgroundColor = .lightGray
+        self.backgroundColor = .white
     }
     
     override func layoutSubviews() {

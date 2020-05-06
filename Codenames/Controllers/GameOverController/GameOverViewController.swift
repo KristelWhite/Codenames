@@ -10,6 +10,10 @@ import UIKit
 
 class GameOverViewController: UIViewController {
 
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet weak var newGame: UIButton!
+    @IBOutlet weak var back: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,6 +21,9 @@ class GameOverViewController: UIViewController {
     }
     
 
+    @IBAction func backToGame(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 

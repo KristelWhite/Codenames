@@ -46,7 +46,6 @@ class NewGameViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "startGame" {
             let cell = self.tableView.cellForRow(at: index!) as! CarouselTableCell
-            print(cell.dictionaries[0])
             print( cell.lastSelectedCell)
             if let dict = cell.lastSelectedCell {
             let index = cell.collectionView.indexPath(for: dict)

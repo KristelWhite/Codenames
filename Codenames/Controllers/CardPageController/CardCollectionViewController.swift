@@ -13,14 +13,21 @@ class CardCollectionViewController: UIViewController, CodenamesLogic {
     
     var model: DictionaryModel?
 
-    @IBOutlet weak var gameRight: UIButton!
+    @IBOutlet weak var gameRuls: UIButton!
+   
+    
+    @IBOutlet weak var newGame: UIButton!
+    
+    @IBAction func showRulls(_ sender: Any) {
+        
+    }
     
     @IBOutlet weak var doublePointLabel: UILabel!
     @IBOutlet weak var scoreBlueLabel: UILabel!
     @IBOutlet weak var scoreRedLabel: UILabel!
-  
     @IBOutlet weak var lineLabel: UILabel!
    
+  
     @IBOutlet weak var keyButton: UIButton!
     
     @IBOutlet weak var detailView: DetailView!
@@ -33,7 +40,7 @@ class CardCollectionViewController: UIViewController, CodenamesLogic {
     let numberOfCardInLine = 5
     let numberOfCards = 25
     
-    let spaceToKeyButton: CGFloat = 44
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,11 +61,23 @@ class CardCollectionViewController: UIViewController, CodenamesLogic {
         
         heightScore.constant = normalSizeDetailView
         higthDetailView.constant = normalSizeDetailView
-        leadKey.constant = spaceToKeyButton
-        trailingKey.constant = spaceToKeyButton * 3
-        topKey.constant = 12
-        higthKey.constant = normalSizeDetailView - 2 * topKey.constant
-        keyButton.backgroundColor = .black
+        leadKey.constant = 60
+        topKey.constant = 20
+        higthKey.constant = 45
+        
+        
+        
+        keyButton.setTitle("Key", for: .normal)
+        keyButton.backgroundColor = .systemPurple
+        keyButton.layer.cornerRadius = 10
+        
+        gameRuls.setTitle("Game changer", for: .normal)
+        gameRuls.layer.borderColor =  UIColor.purple.cgColor
+        gameRuls.layer.cornerRadius = 10
+        gameRuls.layer.borderWidth = 1
+        
+        newGame.setTitle("Start new game", for:.normal )
+        
         
         scoreRedLabel.text = String(self.gameLogic.scoreRedCard)
         scoreRedLabel.font = UIFont.systemFont(ofSize: 55, weight: .semibold)
@@ -72,7 +91,7 @@ class CardCollectionViewController: UIViewController, CodenamesLogic {
         doublePointLabel.text = ":"
         doublePointLabel.font = UIFont.systemFont(ofSize: 55, weight: .semibold)
         
-        gameRight?.heightAnchor.constraint(equalToConstant: 24)
+        gameRuls?.heightAnchor.constraint(equalToConstant: 24)
         
         setupGamefBackgroundColor()
         
@@ -83,8 +102,26 @@ class CardCollectionViewController: UIViewController, CodenamesLogic {
         
     }
     func gameDidEnd(messege message: String) {
-        print()
+        
         //вызов модального окна
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let gameOverVC = storyboard.instantiateViewController(withIdentifier: "GameOverViewController")
+        gameOverVC.modalPresentationStyle = .overFullScreen
+        
+        present(gameOverVC, animated: true, completion: nil)
+        openAllCard()
+        
+    }
+    
+    func openAllCard() -> Void {
+        for cell in cardCollection.visibleCells {
+            let card = cell as? CardCollectionCell
+            if !card!.isCardSelected {
+                card!.isCardSelected = true
+                card?.view.backgroundColor = card?.colorOfCurrentCard(info: (card!.color))
+            }
+            
+        }
     }
     func setupGamefBackgroundColor() {
         print("фон установлен")
@@ -136,6 +173,7 @@ class CardCollectionViewController: UIViewController, CodenamesLogic {
     
     let normalSizeDetailView: CGFloat = 81
     let largthSizeDetailView: CGFloat = 165
+    
     func exchangOfDetailSize() -> CGFloat {
         return self.largthSizeDetailView - self.normalSizeDetailView
     }
@@ -166,10 +204,6 @@ class CardCollectionViewController: UIViewController, CodenamesLogic {
         
     @IBOutlet weak var leadKey: NSLayoutConstraint!
     @IBOutlet weak var higthKey: NSLayoutConstraint!
-
-   
-    @IBOutlet weak var trailingKey: NSLayoutConstraint!
-    
     @IBOutlet weak var topKey: NSLayoutConstraint!
     
 }

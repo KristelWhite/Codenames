@@ -22,7 +22,9 @@ class CollectionDictCell: UICollectionViewCell {
         label.font = UIFont.systemFont(ofSize: 30, weight: .medium)
         label.textAlignment = .center
         
+        
     }
+     
      
     
 

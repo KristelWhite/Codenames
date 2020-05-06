@@ -10,10 +10,15 @@ import UIKit
 
 class RullsViewController: UIViewController {
 
+    @IBOutlet weak var back: UIButton!
+    
+    @IBAction func tapOnBack(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
     
 
