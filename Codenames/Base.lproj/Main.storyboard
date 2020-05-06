@@ -20,15 +20,26 @@
                                 <rect key="frame" x="0.0" y="0.0" width="905" height="271"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaG-bA-Xl5">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RaG-bA-Xl5">
                                 <rect key="frame" x="348" y="303" width="200" height="70"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="2Js-BA-Ns9"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Start Game">
+                                            <attributes>
+                                                <color key="NSColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <font key="NSFont" size="27" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="newGame" id="GDk-GJ-cU7"/>
+                                    <action selector="tapOnButton:" destination="rjz-vm-MU4" eventType="touchUpInside" id="8K3-j1-rMC"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="startGame" id="GDk-GJ-cU7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -52,7 +63,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r3Y-di-9X5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.61607142857142" y="-713.04347826086962"/>
+            <point key="canvasLocation" x="148" y="-862"/>
         </scene>
         <!--Card Collection View Controller-->
         <scene sceneID="tne-QT-ifu">

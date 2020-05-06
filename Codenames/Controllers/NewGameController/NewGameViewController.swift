@@ -14,11 +14,9 @@ class NewGameViewController: UIViewController {
     
     @IBOutlet weak var button: UIButton!
     
-    private enum Constants {
-        static let defaultCount = 4
-    }
+    var index : IndexPath?
 
-    //var photos = [DictionaryModel]()
+    
     //let service = DataProvider()
     
     override func viewDidLoad() {
@@ -26,7 +24,7 @@ class NewGameViewController: UIViewController {
         
         button.layer.cornerRadius = 16
         button.titleLabel?.text = "Start Game"
-        button.titleLabel?.textColor = .white
+        button.titleLabel?.textColor = .black
 
         tableView.dataSource = self
         tableView.delegate = self
@@ -41,9 +39,23 @@ class NewGameViewController: UIViewController {
     }
 
     
+    @IBAction func tapOnButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "startGame", sender: nil)
+        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "startGame" {
+            let cell = self.tableView.cellForRow(at: index!) as! CarouselTableCell
+            if let index = cell.collectionView.indexPath(for: cell.lastSelectedCell!) {
+            let model = cell.dictionaries[index.row]
+            let vc = segue.destination as! CardCollectionViewController
+            vc.model = model
+            }
+        }
+    }
 }
 
-extension NewGameViewController: UITableViewDataSource, UITableViewDelegate {
+extension NewGameViewController: UITableViewDataSource,  UITableViewDelegate {
 
 func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return 3
@@ -60,7 +72,7 @@ func tableView(_ tableView: UITableView,
         cell.titleLabel.text = "Choose Dictinary"
         return cell
     } else if indexPath.row == 2 {
-        // каруселька
+        index = indexPath
         let cell = tableView.dequeueReusableCell(withIdentifier: "carouselCell", for: indexPath)
         return cell
     

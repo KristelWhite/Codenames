@@ -30,26 +30,40 @@ final class DataProvider {
         let dictionaryArray = try? self.context.fetch(request)
 
         if let dictionaries = dictionaryArray, !dictionaries.isEmpty {
-            var dictModels: [DictionaryModel]
+            var dictModels: [DictionaryModel] = []
             for dictionary in dictionaries {
-                var dictModel: DictionaryModel
-                dictModel.name = dictionary.name!
-                dictModel.language = dictionary.language
-                dictModel.type = dictionary.type
                 
-                var wordSet = dictionary.contents as? [Content]
-                if dictModel.type {
+//                dictModel.name = dictionary.name!
+//                dictModel.language = dictionary.language
+//                dictModel.type = dictionary.type
+                
+                var contentSet = dictionary.contents?.allObjects as! [Content]
+                var dictModel : DictionaryModel
+                if dictionary.type {
+                    var array : [String]?
+                    for word in contentSet {
+                        array?.append(word.word!)
+                    }
+                    dictModel = DictionaryModel(name: dictionary.name!, type: dictionary.type, language: dictionary.language, dictContent: ContentModel(word: array, image: nil))
+                    //dictModel.dictContent! = ContentModel(word: array, image: nil)
                     
                 } else {
+                    var array : [UIImage]?
+                    for word in contentSet {
+                        array?.append(UIImage(data: word.image!)!)
+                    }
+                    dictModel = DictionaryModel(name: dictionary.name!, type: dictionary.type, language: dictionary.language, dictContent: ContentModel(word: nil, image: array))
                     
                 }
+                dictModels.append(dictModel)
                 
             }
+        
                 
-            }
-               onComplite(dictModels)
-        }
-        else {
+        onComplite(dictModels)
+      
+
+} else {
             print("бд пустая")
             return
         }
