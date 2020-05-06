@@ -219,10 +219,10 @@
 			children = (
 				638F4FF82461B6BC00F97289 /* TitleTableCell.xib */,
 				638F4FF62461B6AE00F97289 /* TitleTableCell.swift */,
-				638F4FFE2461B80D00F97289 /* CarouselTableCell.swift */,
-				638F50002461B81700F97289 /* CarouselTableCell.xib */,
 				638F50022461B97F00F97289 /* LabelTableCell.swift */,
 				638F50032461B97F00F97289 /* LabelTableCell.xib */,
+				638F4FFE2461B80D00F97289 /* CarouselTableCell.swift */,
+				638F50002461B81700F97289 /* CarouselTableCell.xib */,
 				638F50102461C37E00F97289 /* CollectionDictCell.swift */,
 				638F50112461C37E00F97289 /* CollectionDictCell.xib */,
 			);

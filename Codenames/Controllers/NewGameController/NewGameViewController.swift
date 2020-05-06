@@ -46,10 +46,17 @@ class NewGameViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "startGame" {
             let cell = self.tableView.cellForRow(at: index!) as! CarouselTableCell
-            if let index = cell.collectionView.indexPath(for: cell.lastSelectedCell!) {
-            let model = cell.dictionaries[index.row]
+            print(cell.dictionaries[0])
+            print( cell.lastSelectedCell)
+            if let dict = cell.lastSelectedCell {
+            let index = cell.collectionView.indexPath(for: dict)
+            let model = cell.dictionaries[index!.row]
             let vc = segue.destination as! CardCollectionViewController
             vc.model = model
+            } else {
+                let model = cell.dictionaries[0]
+                let vc = segue.destination as! CardCollectionViewController
+                vc.model = model
             }
         }
     }
@@ -78,13 +85,5 @@ func tableView(_ tableView: UITableView,
     
     }
     return UITableViewCell()
-//    } else {
-//        guard let cell = tableView.dequeueReusableCell(withIdentifier: "imageCell", for: indexPath) as? ImageTableCell else {
-//            return UITableViewCell()
-//        }
-//        let model = photos[indexPath.row - Constants.defaultCount]
-//        cell.customImageView.loadImage(by: model.urls.regular)
-//        cell.textLabel?.text = model.description
-//        return cell
     }
 }

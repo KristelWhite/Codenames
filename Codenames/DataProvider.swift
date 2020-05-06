@@ -33,24 +33,20 @@ final class DataProvider {
             var dictModels: [DictionaryModel] = []
             for dictionary in dictionaries {
                 
-//                dictModel.name = dictionary.name!
-//                dictModel.language = dictionary.language
-//                dictModel.type = dictionary.type
                 
-                var contentSet = dictionary.contents?.allObjects as! [Content]
+                let contentSet = dictionary.contents?.allObjects as! [Content]
                 var dictModel : DictionaryModel
                 if dictionary.type {
-                    var array : [String]?
+                    var array : [String]? = []
                     for word in contentSet {
                         array?.append(word.word!)
                     }
                     dictModel = DictionaryModel(name: dictionary.name!, type: dictionary.type, language: dictionary.language, dictContent: ContentModel(word: array, image: nil))
-                    //dictModel.dictContent! = ContentModel(word: array, image: nil)
                     
                 } else {
-                    var array : [UIImage]?
-                    for word in contentSet {
-                        array?.append(UIImage(data: word.image!)!)
+                    var array : [UIImage]? = []
+                    for image in contentSet {
+                        array?.append(UIImage(data: image.image!)!)
                     }
                     dictModel = DictionaryModel(name: dictionary.name!, type: dictionary.type, language: dictionary.language, dictContent: ContentModel(word: nil, image: array))
                     
