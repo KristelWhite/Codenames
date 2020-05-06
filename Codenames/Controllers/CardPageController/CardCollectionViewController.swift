@@ -40,6 +40,8 @@ class CardCollectionViewController: UIViewController, CodenamesLogic {
     let numberOfCardInLine = 5
     let numberOfCards = 25
     
+
+    
     
     
     override func viewDidLoad() {
@@ -102,16 +104,18 @@ class CardCollectionViewController: UIViewController, CodenamesLogic {
         
     }
     func gameDidEnd(messege message: String) {
-        
         //вызов модального окна
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let gameOverVC = storyboard.instantiateViewController(withIdentifier: "GameOverViewController")
         gameOverVC.modalPresentationStyle = .overFullScreen
-        
         present(gameOverVC, animated: true, completion: nil)
+        let vc = gameOverVC as? GameOverViewController
+        vc?.infoLabel.text = message
         openAllCard()
         
     }
+    
+    
     
     func openAllCard() -> Void {
         for cell in cardCollection.visibleCells {
