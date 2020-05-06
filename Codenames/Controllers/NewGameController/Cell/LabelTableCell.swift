@@ -15,6 +15,8 @@ class LabelTableCell: UITableViewCell {
         super.awakeFromNib()
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 50, weight: .bold)
+        selectionStyle = .none
+        self.contentView.backgroundColor = .clear
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

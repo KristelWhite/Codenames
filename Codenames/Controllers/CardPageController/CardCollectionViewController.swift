@@ -18,7 +18,7 @@ class CardCollectionViewController: UIViewController, CodenamesLogic {
     
     @IBOutlet weak var newGame: UIButton!
     
-    @IBAction func showRulls(_ sender: Any) {
+    @IBAction func showRules(_ sender: Any) {
         
     }
     
@@ -93,8 +93,9 @@ class CardCollectionViewController: UIViewController, CodenamesLogic {
         doublePointLabel.text = ":"
         doublePointLabel.font = UIFont.systemFont(ofSize: 55, weight: .semibold)
         
-        gameRuls?.heightAnchor.constraint(equalToConstant: 24)
         
+        self.cardCollection.backgroundColor = .clear
+       
         setupGamefBackgroundColor()
         
         self.gameLogic.shuffleArray()
@@ -129,15 +130,12 @@ class CardCollectionViewController: UIViewController, CodenamesLogic {
     }
     func setupGamefBackgroundColor() {
         print("фон установлен")
-        let color: UIColor
         if self.gameLogic.blueStarsGame {
-            color = .systemBlue
-            self.view.backgroundColor = color
-            self.cardCollection.backgroundColor = color
+            
+            self.view.backgroundColor = .systemBlue
+            
         } else {
-            color = .systemRed
-            self.view.backgroundColor = color
-            self.cardCollection.backgroundColor = color
+            self.view.backgroundColor = .systemRed
         }
         
         

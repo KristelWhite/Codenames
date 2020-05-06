@@ -17,14 +17,20 @@ class NewGameViewController: UIViewController {
     var index : IndexPath?
 
     
-    //let service = DataProvider()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.contentMode = .center
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(imageLiteralResourceName: "active"))
+        let backImage = UIImageView(frame: self.view.frame)
+        backImage.image = UIImage(imageLiteralResourceName: "dict")
+        self.view.insertSubview(backImage, at: 0)
+        self.tableView.backgroundColor = .clear
         
+        
+        //button.backgroundColor = UIColor(hexString: "#C62828")
         button.layer.cornerRadius = 16
-        button.titleLabel?.text = "Start Game"
-        button.titleLabel?.textColor = .black
+       // button.titleLabel?.text = "Start Game"
+        //button.titleLabel?.textColor = .black
 
         tableView.dataSource = self
         tableView.delegate = self
@@ -46,7 +52,7 @@ class NewGameViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "startGame" {
             let cell = self.tableView.cellForRow(at: index!) as! CarouselTableCell
-            print( cell.lastSelectedCell)
+            
             if let dict = cell.lastSelectedCell {
             let index = cell.collectionView.indexPath(for: dict)
             let model = cell.dictionaries[index!.row]
@@ -72,14 +78,17 @@ func tableView(_ tableView: UITableView,
     if indexPath.row == 0 {
         let cell = tableView.dequeueReusableCell(withIdentifier: "labelCell", for: indexPath) as! LabelTableCell
         cell.label.text = "Codenames"
+        cell.layer.backgroundColor = UIColor.clear.cgColor
         return cell
     } else if indexPath.row == 1 {
         let cell = tableView.dequeueReusableCell(withIdentifier: "titleCell", for: indexPath) as! TitleTableCell
         cell.titleLabel.text = "Choose Dictinary"
+        cell.layer.backgroundColor = UIColor.clear.cgColor
         return cell
     } else if indexPath.row == 2 {
         index = indexPath
         let cell = tableView.dequeueReusableCell(withIdentifier: "carouselCell", for: indexPath)
+        cell.layer.backgroundColor = UIColor.clear.cgColor
         return cell
     
     }

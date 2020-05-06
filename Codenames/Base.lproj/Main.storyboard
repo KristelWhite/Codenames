@@ -239,10 +239,10 @@
             </objects>
             <point key="canvasLocation" x="-529" y="100"/>
         </scene>
-        <!--Rulls View Controller-->
+        <!--Rules View Controller-->
         <scene sceneID="wm0-6n-TcH">
             <objects>
-                <viewController id="at5-IT-XFe" customClass="RullsViewController" customModule="Codenames" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="at5-IT-XFe" customClass="RulesViewController" customModule="Codenames" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Owr-Y6-g5b">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -348,6 +348,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="LjF-a7-M2p"/>
+        <segue reference="fZ8-SU-AJh"/>
     </inferredMetricsTieBreakers>
 </document>

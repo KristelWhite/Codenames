@@ -12,8 +12,9 @@
 		631EED79245CBDF200BD0091 /* CardCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631EED78245CBDF200BD0091 /* CardCollectionViewController.swift */; };
 		631EED7C245CBED600BD0091 /* CardCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631EED7A245CBED600BD0091 /* CardCollectionCell.swift */; };
 		631EED7D245CBED600BD0091 /* CardCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 631EED7B245CBED600BD0091 /* CardCollectionCell.xib */; };
+		63800DD72463449500869B53 /* ExtensionForUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63800DD62463449500869B53 /* ExtensionForUIColor.swift */; };
 		63839D97245D57A300657441 /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63839D96245D57A300657441 /* GameLogic.swift */; };
-		638F4FE0245F501600F97289 /* RullsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F4FDF245F501600F97289 /* RullsViewController.swift */; };
+		638F4FE0245F501600F97289 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F4FDF245F501600F97289 /* RulesViewController.swift */; };
 		638F4FE2245F502900F97289 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F4FE1245F502900F97289 /* GameOverViewController.swift */; };
 		638F4FE4245F503C00F97289 /* NewGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F4FE3245F503C00F97289 /* NewGameViewController.swift */; };
 		638F4FE724607C8900F97289 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F4FE624607C8900F97289 /* CoreDataManager.swift */; };
@@ -60,8 +61,9 @@
 		631EED78245CBDF200BD0091 /* CardCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewController.swift; sourceTree = "<group>"; };
 		631EED7A245CBED600BD0091 /* CardCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionCell.swift; sourceTree = "<group>"; };
 		631EED7B245CBED600BD0091 /* CardCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionCell.xib; sourceTree = "<group>"; };
+		63800DD62463449500869B53 /* ExtensionForUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionForUIColor.swift; sourceTree = "<group>"; };
 		63839D96245D57A300657441 /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
-		638F4FDF245F501600F97289 /* RullsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RullsViewController.swift; sourceTree = "<group>"; };
+		638F4FDF245F501600F97289 /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 		638F4FE1245F502900F97289 /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 		638F4FE3245F503C00F97289 /* NewGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGameViewController.swift; sourceTree = "<group>"; };
 		638F4FE624607C8900F97289 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -153,6 +155,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		63800DD52463412500869B53 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				638F4FE824608A2800F97289 /* DataProvider.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		63839D95245D578C00657441 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,7 +174,7 @@
 		638F4FDB245F4EBA00F97289 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				638F4FDE245F4F7500F97289 /* RullsController */,
+				638F4FDE245F4F7500F97289 /* RulesController */,
 				638F4FDD245F4F2900F97289 /* GameOverController */,
 				638F4FDC245F4F0900F97289 /* NewGameController */,
 				631EED76245CBD7100BD0091 /* CardPageController */,
@@ -189,12 +199,12 @@
 			path = GameOverController;
 			sourceTree = "<group>";
 		};
-		638F4FDE245F4F7500F97289 /* RullsController */ = {
+		638F4FDE245F4F7500F97289 /* RulesController */ = {
 			isa = PBXGroup;
 			children = (
-				638F4FDF245F501600F97289 /* RullsViewController.swift */,
+				638F4FDF245F501600F97289 /* RulesViewController.swift */,
 			);
-			path = RullsController;
+			path = RulesController;
 			sourceTree = "<group>";
 		};
 		638F4FE524607C6100F97289 /* CoreData */ = {
@@ -257,16 +267,17 @@
 		639C6CD22458855A0042E635 /* Codenames */ = {
 			isa = PBXGroup;
 			children = (
+				63800DD52463412500869B53 /* Service */,
 				638F4FF2246098D100F97289 /* Model */,
 				638F4FE524607C6100F97289 /* CoreData */,
 				638F4FDB245F4EBA00F97289 /* Controllers */,
 				63839D95245D578C00657441 /* Logic */,
 				639C6CDF2458855F0042E635 /* Assets.xcassets */,
-				638F4FE824608A2800F97289 /* DataProvider.swift */,
 				63C68DF1245DD7B600FC76F4 /* Main.storyboard */,
 				639C6CE12458855F0042E635 /* LaunchScreen.storyboard */,
 				639C6CE42458855F0042E635 /* Info.plist */,
 				639C6CD32458855A0042E635 /* AppDelegate.swift */,
+				63800DD62463449500869B53 /* ExtensionForUIColor.swift */,
 			);
 			path = Codenames;
 			sourceTree = "<group>";
@@ -457,6 +468,7 @@
 				63839D97245D57A300657441 /* GameLogic.swift in Sources */,
 				63C68DF0245DB3CA00FC76F4 /* DetailView.swift in Sources */,
 				638F4FE4245F503C00F97289 /* NewGameViewController.swift in Sources */,
+				63800DD72463449500869B53 /* ExtensionForUIColor.swift in Sources */,
 				639C6CDE2458855A0042E635 /* Codenames.xcdatamodeld in Sources */,
 				638F4FFF2461B80D00F97289 /* CarouselTableCell.swift in Sources */,
 				631EED79245CBDF200BD0091 /* CardCollectionViewController.swift in Sources */,
@@ -470,7 +482,7 @@
 				639C6CD42458855A0042E635 /* AppDelegate.swift in Sources */,
 				638F4FE724607C8900F97289 /* CoreDataManager.swift in Sources */,
 				638F50122461C37E00F97289 /* CollectionDictCell.swift in Sources */,
-				638F4FE0245F501600F97289 /* RullsViewController.swift in Sources */,
+				638F4FE0245F501600F97289 /* RulesViewController.swift in Sources */,
 				638F4FEB2460928400F97289 /* Dictionary+CoreDataProperties.swift in Sources */,
 				638F4FF1246092B400F97289 /* Content+CoreDataProperties.swift in Sources */,
 				638F50042461B97F00F97289 /* LabelTableCell.swift in Sources */,
