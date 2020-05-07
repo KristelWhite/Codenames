@@ -42,16 +42,16 @@ class GameLogic {
         scoreRedCard -= 1
         self.delegate?.changeScore(isBlueCard: false, score: scoreRedCard)
         if scoreRedCard == 0 {
-            self.delegate?.gameDidEnd(messege: "Победили красные")
+            self.delegate?.gameDidEnd(messege: "Red team wins !")
         }
     case .blue:
         scoreBlueCard -= 1
         self.delegate?.changeScore(isBlueCard: true, score: scoreBlueCard)
         if scoreBlueCard == 0 {
-            self.delegate?.gameDidEnd(messege: "Победили синие")
+            self.delegate?.gameDidEnd(messege: "Blue team wins !")
         }
     case .black:
-        self.delegate?.gameDidEnd(messege: "Черная карта!")
+        self.delegate?.gameDidEnd(messege: "Back card !")
     case .yellow:
         print("yellow card")
      }

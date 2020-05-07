@@ -18,9 +18,7 @@ class CardCollectionViewController: UIViewController, CodenamesLogic {
     
     @IBOutlet weak var newGame: UIButton!
     
-    @IBAction func showRules(_ sender: Any) {
-        
-    }
+   
     
     @IBOutlet weak var doublePointLabel: UILabel!
     @IBOutlet weak var scoreBlueLabel: UILabel!
@@ -68,18 +66,28 @@ class CardCollectionViewController: UIViewController, CodenamesLogic {
         higthKey.constant = 45
         
         
-        
+        keyButton.layer.shadowOffset = .zero
+        keyButton.layer.shadowColor = UIColor.yellow.cgColor
+        keyButton.layer.shadowOpacity = 1
+        keyButton.layer.shadowRadius = 0
         keyButton.setTitle("Key", for: .normal)
-        keyButton.backgroundColor = .systemPurple
+        keyButton.backgroundColor = .yellow
+        keyButton.setTitleColor(.black, for: .normal)
+        keyButton.titleLabel?.font = UIFont.systemFont(ofSize: 25, weight: .semibold)
         keyButton.layer.cornerRadius = 10
+        keyButton.layer.borderWidth = 1
+        keyButton.layer.borderColor = UIColor.black.cgColor
         
         gameRuls.setTitle("Game changer", for: .normal)
-        gameRuls.layer.borderColor =  UIColor.purple.cgColor
-        gameRuls.layer.cornerRadius = 10
-        gameRuls.layer.borderWidth = 1
+        gameRuls.setTitleColor(.blue, for: .normal)
+        gameRuls.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .medium)
+//        gameRuls.layer.borderColor =  UIColor.green.cgColor
+//        gameRuls.layer.cornerRadius = 10
+//        gameRuls.layer.borderWidth = 1
         
         newGame.setTitle("Start new game", for:.normal )
-        
+        newGame.setTitleColor(.red, for: .normal)
+        newGame.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .medium)
         
         scoreRedLabel.text = String(self.gameLogic.scoreRedCard)
         scoreRedLabel.font = UIFont.systemFont(ofSize: 55, weight: .semibold)
@@ -130,12 +138,13 @@ class CardCollectionViewController: UIViewController, CodenamesLogic {
     }
     func setupGamefBackgroundColor() {
         print("фон установлен")
+        let backImage = UIImageView(frame: self.view.frame)
         if self.gameLogic.blueStarsGame {
-            
-            self.view.backgroundColor = .systemBlue
-            
+            backImage.image = UIImage(imageLiteralResourceName: "blue")
+            self.view.insertSubview(backImage, at: 0)
         } else {
-            self.view.backgroundColor = .systemRed
+            backImage.image = UIImage(imageLiteralResourceName: "active")
+            self.view.insertSubview(backImage, at: 0)
         }
         
         
@@ -149,7 +158,7 @@ class CardCollectionViewController: UIViewController, CodenamesLogic {
      }
     
     @IBAction func tapDownKey(_ sender: Any) {
-        
+        keyButton.layer.shadowRadius = 20
         for cell in cardCollection.visibleCells {
             let card = cell as? CardCollectionCell
             if !card!.isCardSelected {
@@ -163,7 +172,7 @@ class CardCollectionViewController: UIViewController, CodenamesLogic {
     
     
     @IBAction func tapUpKey(_ sender: Any) {
-        
+        keyButton.layer.shadowRadius = 0
         for cell in cardCollection.visibleCells {
             let card = cell as? CardCollectionCell
             if !card!.isCardSelected {
@@ -174,7 +183,7 @@ class CardCollectionViewController: UIViewController, CodenamesLogic {
     }
     
     let normalSizeDetailView: CGFloat = 81
-    let largthSizeDetailView: CGFloat = 165
+    let largthSizeDetailView: CGFloat = 190
     
     func exchangOfDetailSize() -> CGFloat {
         return self.largthSizeDetailView - self.normalSizeDetailView

@@ -12,26 +12,28 @@ class GameOverViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
+    
     @IBOutlet weak var newGame: UIButton!
     @IBOutlet weak var back: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        newGame.layer.cornerRadius = 20
+        newGame.layer.borderColor = UIColor.systemGreen.cgColor
+        newGame.layer.borderWidth = 1
+        newGame.setTitleColor(.systemGreen, for: .normal)
+        newGame.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .medium)
+        
+        back.layer.cornerRadius = 20
+        back.layer.borderColor = UIColor.systemGray.cgColor
+        back.layer.borderWidth = 1
+        back.setTitleColor(.systemGray2, for: .normal)
+        back.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .medium)
+        
     }
     
 
     @IBAction func backToGame(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }

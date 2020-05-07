@@ -22,15 +22,23 @@ class NewGameViewController: UIViewController {
         self.view.contentMode = .center
         //self.view.backgroundColor = UIColor(patternImage: UIImage(imageLiteralResourceName: "active"))
         let backImage = UIImageView(frame: self.view.frame)
-        backImage.image = UIImage(imageLiteralResourceName: "dict")
+        backImage.image = UIImage(imageLiteralResourceName: "ngb2")
         self.view.insertSubview(backImage, at: 0)
         self.tableView.backgroundColor = .clear
         
-        
-        //button.backgroundColor = UIColor(hexString: "#C62828")
         button.layer.cornerRadius = 16
-       // button.titleLabel?.text = "Start Game"
-        //button.titleLabel?.textColor = .black
+        button.setTitleColor(.white, for: .normal)
+        //button.setBackgroundImage(UIImage(imageLiteralResourceName: "green"), for: .normal)
+//        let buttonImage = UIImageView(frame: self.view.frame)
+//        buttonImage.image = UIImage(imageLiteralResourceName: "green")
+//        self.view.insertSubview(buttonImage, at: 0)
+        button.layer.borderWidth = 2
+        button.layer.borderColor = UIColor.black.cgColor
+        button.backgroundColor = UIColor(hexString: "#4CAF50")
+        
+        button.layer.shadowRadius = 10
+        button.layer.shadowOpacity = 0.6
+        button.layer.shadowOffset = CGSize(width: 4, height: 4)
 
         tableView.dataSource = self
         tableView.delegate = self

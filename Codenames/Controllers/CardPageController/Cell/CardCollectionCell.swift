@@ -26,7 +26,7 @@ class CardCollectionCell: UICollectionViewCell {
     }
     var color: CardColor = .yellow
     var isCardSelected: Bool = false
-    let defoultColor: UIColor = .gray
+    let defoultColor: UIColor = UIColor(patternImage: UIImage(imageLiteralResourceName: "white1"))
     //var content: CardContent = .label(label: "defoult")
     
     
@@ -45,13 +45,13 @@ class CardCollectionCell: UICollectionViewCell {
     func colorOfCurrentCard(info:CardColor) -> UIColor {
         switch info {
         case .red:
-            return .red
+            return UIColor(hexString: "#f24535")
         case .blue:
-            return .blue
+            return UIColor(hexString: "#73cec5")
         case .black:
-            return .black
+            return UIColor(hexString: "#2d3436")
         case .yellow:
-            return .yellow
+            return UIColor(hexString: "#f4cf65")
         }
     }
     override func awakeFromNib() {
@@ -66,8 +66,13 @@ class CardCollectionCell: UICollectionViewCell {
         cardLabel?.textAlignment = .center
         cardLabel?.textColor = .black
         cardLabel?.translatesAutoresizingMaskIntoConstraints = false
+        cardLabel.font = UIFont.systemFont(ofSize: 20, weight: .medium)
         
         view.backgroundColor = defoultColor
+        layer.borderWidth = 2
+        layer.borderColor = UIColor.black.cgColor
+        
+        
         
         
         

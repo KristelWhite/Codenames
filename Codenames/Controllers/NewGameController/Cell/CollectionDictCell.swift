@@ -19,7 +19,8 @@ class CollectionDictCell: UICollectionViewCell {
         
         layer.cornerRadius = 10
         label.textColor = .white
-        label.font = UIFont.systemFont(ofSize: 30, weight: .medium)
+        label.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
+        
         label.textAlignment = .center
         
         
