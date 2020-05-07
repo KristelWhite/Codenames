@@ -61,9 +61,8 @@ class NewGameViewController: UIViewController {
         if segue.identifier == "startGame" {
             let cell = self.tableView.cellForRow(at: index!) as! CarouselTableCell
             
-            if let dict = cell.lastSelectedCell {
-            let index = cell.collectionView.indexPath(for: dict)
-            let model = cell.dictionaries[index!.row]
+            if let dict = cell.choosedDictionary  {
+            let model = dict
             let vc = segue.destination as! CardCollectionViewController
             vc.model = model
             } else {

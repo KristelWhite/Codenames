@@ -51,7 +51,7 @@ class GameLogic {
             self.delegate?.gameDidEnd(messege: "Blue team wins !")
         }
     case .black:
-        self.delegate?.gameDidEnd(messege: "Back card !")
+        self.delegate?.gameDidEnd(messege: "Black card !")
     case .yellow:
         print("yellow card")
      }
