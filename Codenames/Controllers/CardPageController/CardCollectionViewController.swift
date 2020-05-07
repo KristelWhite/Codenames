@@ -71,14 +71,14 @@ class CardCollectionViewController: UIViewController, CodenamesLogic {
         keyButton.layer.shadowOpacity = 1
         keyButton.layer.shadowRadius = 0
         keyButton.setTitle("Key", for: .normal)
-        keyButton.backgroundColor = .yellow
+        keyButton.backgroundColor = .systemGreen
         keyButton.setTitleColor(.black, for: .normal)
         keyButton.titleLabel?.font = UIFont.systemFont(ofSize: 25, weight: .semibold)
         keyButton.layer.cornerRadius = 10
         keyButton.layer.borderWidth = 1
         keyButton.layer.borderColor = UIColor.black.cgColor
         
-        gameRuls.setTitle("Game changer", for: .normal)
+        gameRuls.setTitle("Game rules", for: .normal)
         gameRuls.setTitleColor(.blue, for: .normal)
         gameRuls.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .medium)
 //        gameRuls.layer.borderColor =  UIColor.green.cgColor

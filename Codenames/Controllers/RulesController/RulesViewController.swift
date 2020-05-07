@@ -21,7 +21,7 @@ class RulesViewController: UIViewController {
         super.viewDidLoad()
         
         back.titleLabel?.font = UIFont.systemFont(ofSize: 23, weight: .medium)
-        label.text = "Rules of game"
+        label.text = "Game rules"
         label.font = UIFont.systemFont(ofSize: 30, weight: .semibold)
         label.textAlignment = .center
         label.textColor = .systemYellow
