@@ -22,8 +22,8 @@ class DetailView: UIView {
     }
     func setup() -> Void {
         self.isOpaque = false
-        self.alpha = 0.7
-        self.backgroundColor = .lightGray
+        self.alpha = 0.8
+        self.backgroundColor = UIColor(hexString: "#fce4c6")
     }
     
     override func layoutSubviews() {
