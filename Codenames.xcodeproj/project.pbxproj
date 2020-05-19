@@ -12,7 +12,11 @@
 		631EED79245CBDF200BD0091 /* CardCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631EED78245CBDF200BD0091 /* CardCollectionViewController.swift */; };
 		631EED7C245CBED600BD0091 /* CardCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631EED7A245CBED600BD0091 /* CardCollectionCell.swift */; };
 		631EED7D245CBED600BD0091 /* CardCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 631EED7B245CBED600BD0091 /* CardCollectionCell.xib */; };
+		63362B6924742EE0003B9D4C /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63362B6724742EE0003B9D4C /* TitleTableViewCell.swift */; };
+		63362B6A24742EE0003B9D4C /* TitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63362B6824742EE0003B9D4C /* TitleTableViewCell.xib */; };
 		63800DD72463449500869B53 /* ExtensionForUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63800DD62463449500869B53 /* ExtensionForUIColor.swift */; };
+		63800DDE2465842A00869B53 /* CarouselTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63800DDC2465842A00869B53 /* CarouselTableViewCell.swift */; };
+		63800DDF2465842A00869B53 /* CarouselTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63800DDD2465842A00869B53 /* CarouselTableViewCell.xib */; };
 		63839D97245D57A300657441 /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63839D96245D57A300657441 /* GameLogic.swift */; };
 		638F4FE0245F501600F97289 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F4FDF245F501600F97289 /* RulesViewController.swift */; };
 		638F4FE2245F502900F97289 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F4FE1245F502900F97289 /* GameOverViewController.swift */; };
@@ -24,10 +28,6 @@
 		638F4FEF246092A700F97289 /* Dictionary+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F4FEE246092A700F97289 /* Dictionary+CoreDataClass.swift */; };
 		638F4FF1246092B400F97289 /* Content+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F4FF0246092B400F97289 /* Content+CoreDataProperties.swift */; };
 		638F4FF42460997500F97289 /* DictionaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F4FF32460997500F97289 /* DictionaryModel.swift */; };
-		638F4FF72461B6AE00F97289 /* TitleTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F4FF62461B6AE00F97289 /* TitleTableCell.swift */; };
-		638F4FF92461B6BC00F97289 /* TitleTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 638F4FF82461B6BC00F97289 /* TitleTableCell.xib */; };
-		638F4FFF2461B80D00F97289 /* CarouselTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F4FFE2461B80D00F97289 /* CarouselTableCell.swift */; };
-		638F50012461B81700F97289 /* CarouselTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 638F50002461B81700F97289 /* CarouselTableCell.xib */; };
 		638F50042461B97F00F97289 /* LabelTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F50022461B97F00F97289 /* LabelTableCell.swift */; };
 		638F50052461B97F00F97289 /* LabelTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 638F50032461B97F00F97289 /* LabelTableCell.xib */; };
 		638F50122461C37E00F97289 /* CollectionDictCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F50102461C37E00F97289 /* CollectionDictCell.swift */; };
@@ -61,7 +61,11 @@
 		631EED78245CBDF200BD0091 /* CardCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewController.swift; sourceTree = "<group>"; };
 		631EED7A245CBED600BD0091 /* CardCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionCell.swift; sourceTree = "<group>"; };
 		631EED7B245CBED600BD0091 /* CardCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionCell.xib; sourceTree = "<group>"; };
+		63362B6724742EE0003B9D4C /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
+		63362B6824742EE0003B9D4C /* TitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleTableViewCell.xib; sourceTree = "<group>"; };
 		63800DD62463449500869B53 /* ExtensionForUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionForUIColor.swift; sourceTree = "<group>"; };
+		63800DDC2465842A00869B53 /* CarouselTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselTableViewCell.swift; sourceTree = "<group>"; };
+		63800DDD2465842A00869B53 /* CarouselTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselTableViewCell.xib; sourceTree = "<group>"; };
 		63839D96245D57A300657441 /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
 		638F4FDF245F501600F97289 /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 		638F4FE1245F502900F97289 /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
@@ -73,10 +77,6 @@
 		638F4FEE246092A700F97289 /* Dictionary+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Dictionary+CoreDataClass.swift"; path = "/Users/kristina/XCodeProjects/Codenames.2/Dictionary+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		638F4FF0246092B400F97289 /* Content+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Content+CoreDataProperties.swift"; path = "/Users/kristina/XCodeProjects/Codenames.2/Content+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		638F4FF32460997500F97289 /* DictionaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryModel.swift; sourceTree = "<group>"; };
-		638F4FF62461B6AE00F97289 /* TitleTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TitleTableCell.swift; path = "../../../../../../Documents/GitHub/iOSSpringSchool2020Example/iOSTest/Main Page/Cells/TitleTableCell.swift"; sourceTree = "<group>"; };
-		638F4FF82461B6BC00F97289 /* TitleTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TitleTableCell.xib; path = "../../../../../../Documents/GitHub/iOSSpringSchool2020Example/iOSTest/Main Page/Cells/TitleTableCell.xib"; sourceTree = "<group>"; };
-		638F4FFE2461B80D00F97289 /* CarouselTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarouselTableCell.swift; path = "../../../../../../Documents/GitHub/iOSSpringSchool2020Example/iOSTest/Main Page/Cells/CarouselTableCell.swift"; sourceTree = "<group>"; };
-		638F50002461B81700F97289 /* CarouselTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CarouselTableCell.xib; path = "../../../../../../Documents/GitHub/iOSSpringSchool2020Example/iOSTest/Main Page/Cells/CarouselTableCell.xib"; sourceTree = "<group>"; };
 		638F50022461B97F00F97289 /* LabelTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTableCell.swift; sourceTree = "<group>"; };
 		638F50032461B97F00F97289 /* LabelTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelTableCell.xib; sourceTree = "<group>"; };
 		638F50102461C37E00F97289 /* CollectionDictCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDictCell.swift; sourceTree = "<group>"; };
@@ -227,14 +227,14 @@
 		638F4FF52461B6A400F97289 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				638F4FF82461B6BC00F97289 /* TitleTableCell.xib */,
-				638F4FF62461B6AE00F97289 /* TitleTableCell.swift */,
 				638F50022461B97F00F97289 /* LabelTableCell.swift */,
 				638F50032461B97F00F97289 /* LabelTableCell.xib */,
-				638F4FFE2461B80D00F97289 /* CarouselTableCell.swift */,
-				638F50002461B81700F97289 /* CarouselTableCell.xib */,
+				63800DDC2465842A00869B53 /* CarouselTableViewCell.swift */,
+				63800DDD2465842A00869B53 /* CarouselTableViewCell.xib */,
 				638F50102461C37E00F97289 /* CollectionDictCell.swift */,
 				638F50112461C37E00F97289 /* CollectionDictCell.xib */,
+				63362B6724742EE0003B9D4C /* TitleTableViewCell.swift */,
+				63362B6824742EE0003B9D4C /* TitleTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -378,12 +378,12 @@
 				639C6CE32458855F0042E635 /* LaunchScreen.storyboard in Resources */,
 				63C68DF3245DD7B600FC76F4 /* Main.storyboard in Resources */,
 				631EED74245CB94F00BD0091 /* GoogleService-Info.plist in Resources */,
+				63800DDF2465842A00869B53 /* CarouselTableViewCell.xib in Resources */,
 				638F50052461B97F00F97289 /* LabelTableCell.xib in Resources */,
 				638F50132461C37E00F97289 /* CollectionDictCell.xib in Resources */,
+				63362B6A24742EE0003B9D4C /* TitleTableViewCell.xib in Resources */,
 				631EED7D245CBED600BD0091 /* CardCollectionCell.xib in Resources */,
-				638F50012461B81700F97289 /* CarouselTableCell.xib in Resources */,
 				639C6CE02458855F0042E635 /* Assets.xcassets in Resources */,
-				638F4FF92461B6BC00F97289 /* TitleTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,15 +468,15 @@
 				63839D97245D57A300657441 /* GameLogic.swift in Sources */,
 				63C68DF0245DB3CA00FC76F4 /* DetailView.swift in Sources */,
 				638F4FE4245F503C00F97289 /* NewGameViewController.swift in Sources */,
+				63800DDE2465842A00869B53 /* CarouselTableViewCell.swift in Sources */,
 				63800DD72463449500869B53 /* ExtensionForUIColor.swift in Sources */,
 				639C6CDE2458855A0042E635 /* Codenames.xcdatamodeld in Sources */,
-				638F4FFF2461B80D00F97289 /* CarouselTableCell.swift in Sources */,
 				631EED79245CBDF200BD0091 /* CardCollectionViewController.swift in Sources */,
+				63362B6924742EE0003B9D4C /* TitleTableViewCell.swift in Sources */,
 				638F4FE924608A2800F97289 /* DataProvider.swift in Sources */,
 				638F4FE2245F502900F97289 /* GameOverViewController.swift in Sources */,
 				638F4FF42460997500F97289 /* DictionaryModel.swift in Sources */,
 				638F4FEF246092A700F97289 /* Dictionary+CoreDataClass.swift in Sources */,
-				638F4FF72461B6AE00F97289 /* TitleTableCell.swift in Sources */,
 				638F4FED2460929600F97289 /* Content+CoreDataClass.swift in Sources */,
 				631EED7C245CBED600BD0091 /* CardCollectionCell.swift in Sources */,
 				639C6CD42458855A0042E635 /* AppDelegate.swift in Sources */,

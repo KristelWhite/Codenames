@@ -10,20 +10,20 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionDictCell" customModule="Codenames" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
+            <rect key="frame" x="0.0" y="0.0" width="200" height="120"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
+                <rect key="frame" x="0.0" y="0.0" width="200" height="120"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3hY-C9-cLk">
-                        <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="120"/>
                         <subviews>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dict" translatesAutoresizingMaskIntoConstraints="NO" id="Jqs-u9-upI">
-                                <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="120"/>
                             </imageView>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYX-KP-Cnd">
-                                <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="120"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -35,7 +35,7 @@
                             <constraint firstAttribute="trailing" secondItem="Jqs-u9-upI" secondAttribute="trailing" id="2A2-7n-TJ1"/>
                             <constraint firstItem="Jqs-u9-upI" firstAttribute="leading" secondItem="3hY-C9-cLk" secondAttribute="leading" id="45F-iS-9tX"/>
                             <constraint firstAttribute="bottom" secondItem="Jqs-u9-upI" secondAttribute="bottom" id="GWh-0v-uuO"/>
-                            <constraint firstAttribute="height" constant="100" id="Oi7-Id-anc"/>
+                            <constraint firstAttribute="height" constant="120" id="Oi7-Id-anc"/>
                             <constraint firstAttribute="bottom" secondItem="QYX-KP-Cnd" secondAttribute="bottom" id="Svb-M6-rWd"/>
                             <constraint firstAttribute="trailing" secondItem="QYX-KP-Cnd" secondAttribute="trailing" id="bD8-rC-QYI"/>
                             <constraint firstItem="QYX-KP-Cnd" firstAttribute="top" secondItem="3hY-C9-cLk" secondAttribute="top" id="dgo-LR-1ue"/>

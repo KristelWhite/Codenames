@@ -45,9 +45,9 @@ class NewGameViewController: UIViewController {
         tableView.register(UINib(nibName: "LabelTableCell", bundle: nil),
         forCellReuseIdentifier: "labelCell")
                           
-        tableView.register(UINib(nibName: "TitleTableCell", bundle: nil),
+        tableView.register(UINib(nibName: "TitleTableViewCell", bundle: nil),
                            forCellReuseIdentifier: "titleCell")
-        tableView.register(UINib(nibName: "CarouselTableCell", bundle: nil),
+        tableView.register(UINib(nibName: "CarouselTableViewCell", bundle: nil),
                            forCellReuseIdentifier: "carouselCell")
         
     }
@@ -59,7 +59,7 @@ class NewGameViewController: UIViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "startGame" {
-            let cell = self.tableView.cellForRow(at: index!) as! CarouselTableCell
+            let cell = self.tableView.cellForRow(at: index!) as! CarouselTableViewCell
             
             if let dict = cell.choosedDictionary  {
             let model = dict
@@ -88,17 +88,21 @@ func tableView(_ tableView: UITableView,
         cell.layer.backgroundColor = UIColor.clear.cgColor
         return cell
     } else if indexPath.row == 1 {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "titleCell", for: indexPath) as! TitleTableCell
-        cell.titleLabel.text = "Choose Dictinary"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "titleCell", for: indexPath) as! TitleTableViewCell
+
+        print(cell)
+        cell.titleLabel.text = "Choose Dictionary"
         cell.layer.backgroundColor = UIColor.clear.cgColor
         return cell
     } else if indexPath.row == 2 {
         index = indexPath
-        let cell = tableView.dequeueReusableCell(withIdentifier: "carouselCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "carouselCell", for: indexPath) as! CarouselTableViewCell
         cell.layer.backgroundColor = UIColor.clear.cgColor
         return cell
-    
+
     }
+    else {
     return UITableViewCell()
     }
+}
 }
